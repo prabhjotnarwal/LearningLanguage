@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
     private void loginUserAccount() {
         progressBar.setVisibility(View.VISIBLE);
 
-        String email, password;
+        final String email, password;
         email = emailTV.getText().toString();
         password = passwordTV.getText().toString();
 
@@ -88,10 +88,19 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
-                            progressBar.setVisibility(View.GONE);
-                            Intent intent = new Intent(LoginActivity.this, categoryActivity.class);
-                            startActivity(intent);
+                            if(email=="admin@gmail.com"&& password=="welcome1") {
+                                Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
+                                progressBar.setVisibility(View.GONE);
+                                Intent intent = new Intent(LoginActivity.this, adminDashboard.class);
+                                startActivity(intent);
+                            }
+                            else
+                            {
+                                Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
+                                progressBar.setVisibility(View.GONE);
+                                Intent intent = new Intent(LoginActivity.this, categoryActivity.class);
+                                startActivity(intent);
+                            }
                         }
                         else {
                             Toast.makeText(getApplicationContext(), "Login failed!"+ task.getException().getMessage(), Toast.LENGTH_LONG).show();
@@ -99,9 +108,11 @@ public class LoginActivity extends AppCompatActivity {
                         }
 
 
-
                     }
                 });
+
+
+
     }
 
     private void initializeUI() {

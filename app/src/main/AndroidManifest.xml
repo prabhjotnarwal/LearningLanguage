@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".alphaAdvance">
-        </activity>
-        <activity android:name=".alphaLesson2">
-        </activity>
+        <activity android:name=".adminDashboard"></activity>
+        <activity android:name=".alphaAdvance"></activity>
+        <activity android:name=".alphaLesson2"></activity>
         <activity android:name=".levelActivity" />
-        <activity android:name=".alphaLesson1"></activity>
+        <activity android:name=".alphaLesson1" />
         <activity android:name=".categoryActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".splashs" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <activity android:name=".splashs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
