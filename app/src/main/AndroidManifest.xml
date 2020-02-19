@@ -14,11 +14,12 @@
         <activity android:name=".alphaLesson2"></activity>
         <activity android:name=".levelActivity" />
         <activity android:name=".alphaLesson1">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".categoryActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />

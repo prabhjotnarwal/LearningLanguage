@@ -88,12 +88,14 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            if(email=="admin@gmail.com"&& password=="welcome1") {
+                            if (email.equals("admin@gmail.com")) {
                                 Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);
                                 Intent intent = new Intent(LoginActivity.this, adminDashboard.class);
                                 startActivity(intent);
+
                             }
+
                             else
                             {
                                 Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
