@@ -3,6 +3,7 @@ package com.example.learninglanguage;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 public class intermediate_test extends AppCompatActivity {
     Button b1,b2,b3,b4,b5,b6;
@@ -11,7 +12,7 @@ public class intermediate_test extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intermediate_test);
+        setContentView(R.layout.activity_intermediate_test);
         b1=findViewById(R.id.sound);
         b2=findViewById(R.id.opta);
         b3=findViewById(R.id.optb);
