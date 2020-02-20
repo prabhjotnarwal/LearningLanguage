@@ -12,18 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".basic_test">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+           </activity>
+        <activity android:name=".intermediate_test"></activity>
         <activity android:name=".adminDashboard" />
-        <activity android:name=".alphaAdvance" />
+
         <activity android:name=".alphaLesson2" />
         <activity android:name=".levelActivity" />
         <activity android:name=".alphaLesson1"></activity>
         <activity android:name=".categoryActivity">
 
+        </activity>
+        <activity android:name=".AdvanceLevel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
