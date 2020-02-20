@@ -2,17 +2,10 @@ package com.example.learninglanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.AssetManager;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
-import java.io.FileInputStream;
-import java.io.IOException;
-
-import static android.os.Build.VERSION_CODES.M;
 
 public class alphaLesson1 extends AppCompatActivity {
 private Button q1,w1,e1,r1,t1,y1,u1,i1,o1,p1,a1,s1,d1,f1,g1,h1,j1,k1,l1,z1,x1,c1,v1,b1,n1,m1;
