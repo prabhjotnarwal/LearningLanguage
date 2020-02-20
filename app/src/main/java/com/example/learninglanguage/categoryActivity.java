@@ -28,7 +28,7 @@ ListView lv;
                     @Override
                     public void onItemClick(AdapterView<?> parent, View v,
                                             int position, long id) {
-                        Intent intent = new Intent(categoryActivity.this,levelActivity.class);
+                        Intent intent = new Intent(categoryActivity.this,MainActivity.class);
                         intent.putExtra("position",position);
                         startActivity(intent);
                     }

@@ -20,14 +20,20 @@ private Button q1,w1,e1,r1,t1,y1,u1,i1,o1,p1,a1,s1,d1,f1,g1,h1,j1,k1,l1,z1,x1,c1
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
         initializeUI();
-    }
-        final MediaPlayer mp = new MediaPlayer();
+        final MediaPlayer mp = MediaPlayer.create(alphaLesson1.this, R.raw.ab);
+        a1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    if (mp.isPlaying()) {
+                        mp.stop();
+                        mp.release();
 
-            public void aPlay(View v) {
-
+                    } mp.start();
+                } catch(Exception e) { e.printStackTrace(); }
             }
-
-
+        });
+    }
     private void initializeUI() {
         a1=findViewById(R.id.a);
         b1=findViewById(R.id.b);

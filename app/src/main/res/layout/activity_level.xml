@@ -8,11 +8,11 @@
     tools:context=".levelActivity">
 
     <Button
-        android:id="@+id/basic"
+        android:id="@+id/button"
         android:layout_width="196dp"
         android:layout_height="61dp"
         android:text="Basic"
-        app:layout_constraintBottom_toTopOf="@+id/inter"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,18 +20,18 @@
         app:layout_constraintVertical_bias="0.842" />
 
     <Button
-        android:id="@+id/inter"
+        android:id="@+id/button2"
         android:layout_width="196dp"
         android:layout_height="59dp"
         android:layout_marginBottom="28dp"
         android:text="Intermediate"
-        app:layout_constraintBottom_toTopOf="@+id/advance"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/advance"
+        android:id="@+id/button3"
         android:layout_width="197dp"
         android:layout_height="56dp"
         android:layout_marginBottom="296dp"
