@@ -14,11 +14,28 @@ public Button ad,in,ba;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
         ad=findViewById(R.id.advance);
+        in=findViewById(R.id.inter);
+        ba=findViewById(R.id.basic);
+        int value = getIntent().getExtras().getInt("position");
+        
         ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(levelActivity.this,AdvanceLevel.class);
-
+                startActivity(intent);
+            }
+        });
+        in.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(levelActivity.this,alphaLesson2.class);
+                startActivity(intent);
+            }
+        });
+        ba.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(levelActivity.this,alphaLesson1.class);
                 startActivity(intent);
             }
         });
