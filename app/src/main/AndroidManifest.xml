@@ -20,14 +20,14 @@
         <activity android:name=".levelActivity" />
         <activity android:name=".alphaLesson1"></activity>
         <activity android:name=".categoryActivity">
-
-        </activity>
-        <activity android:name=".AdvanceLevel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".AdvanceLevel">
+
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />

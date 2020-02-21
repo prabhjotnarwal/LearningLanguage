@@ -14,7 +14,10 @@ public Button ad,in,ba;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level);
         ad=findViewById(R.id.button3);
-        int value = getIntent().getExtras().getInt("position");
+        ba=findViewById(R.id.button);
+        in=findViewById(R.id.button2);
+
+       // int value = getIntent().getExtras().getInt("position");
         ba.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
