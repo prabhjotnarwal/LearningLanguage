@@ -11,7 +11,7 @@ public class intermediate_test extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intermediate_test);
+        setContentView(R.layout.activity_intermediate_test);
         b1=findViewById(R.id.sound);
         b2=findViewById(R.id.opta);
         b3=findViewById(R.id.optb);
