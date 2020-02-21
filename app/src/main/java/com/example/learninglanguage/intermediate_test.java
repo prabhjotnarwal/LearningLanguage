@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class basic_test extends AppCompatActivity {
+public class intermediate_test extends AppCompatActivity {
     Button b1,b2,b3,b4,b5,b6;
 
 
