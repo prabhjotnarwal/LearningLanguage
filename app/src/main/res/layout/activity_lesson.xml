@@ -9,9 +9,7 @@
 
     <Button
         android:id="@+id/z"
-
         android:background="@drawable/z"
-
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -45,7 +43,7 @@
         android:id="@+id/w"
         android:layout_width="71dp"
         android:background="@drawable/w"
-        android:textSize="25sp"
+
         android:layout_height="52dp"
 
         android:layout_marginStart="16dp"
@@ -80,7 +78,7 @@
 
         android:background="@drawable/v"
         android:layout_width="71dp"
-        android:textSize="25sp"
+
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -96,7 +94,7 @@
         android:id="@+id/u"
 
         android:background="@drawable/u"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -113,7 +111,7 @@ s
         android:id="@+id/s"
 
         android:background="@drawable/s"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -130,7 +128,7 @@ s
         android:id="@+id/t"
 
         android:background="@drawable/t"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -147,7 +145,7 @@ s
         android:id="@+id/r"
 
         android:background="@drawable/r"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -164,7 +162,7 @@ s
         android:id="@+id/q"
 
         android:background="@drawable/q"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -181,8 +179,6 @@ s
         android:id="@+id/p"
 
         android:background="@drawable/p"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -200,7 +196,6 @@ s
 
         android:background="@drawable/o"
         android:layout_width="71dp"
-        android:textSize="25sp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
@@ -216,8 +211,7 @@ s
         android:id="@+id/n"
 
         android:background="@drawable/n"
-        android:textStyle="bold"
-        android:textSize="25sp"
+
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -234,8 +228,6 @@ s
         android:id="@+id/m"
 
         android:background="@drawable/m"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -252,8 +244,6 @@ s
         android:id="@+id/l"
 
         android:background="@drawable/l"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -269,8 +259,6 @@ s
     <Button
         android:id="@+id/k"
         android:background="@drawable/k"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -287,8 +275,6 @@ s
         android:id="@+id/j"
 
         android:background="@drawable/j"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -304,8 +290,6 @@ s
     <Button
         android:id="@+id/a"
         android:background="@drawable/a"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -324,8 +308,6 @@ s
         android:id="@+id/e"
 
         android:background="@drawable/e"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -342,8 +324,6 @@ s
         android:id="@+id/i"
 
         android:background="@drawable/i"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="40dp"
@@ -360,9 +340,6 @@ s
     <Button
         android:id="@+id/h"
         android:background="@drawable/h"
-
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -379,8 +356,6 @@ s
         android:id="@+id/f"
 
         android:background="@drawable/f"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -397,8 +372,6 @@ s
         android:id="@+id/g"
 
         android:background="@drawable/g"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -415,8 +388,6 @@ s
         android:id="@+id/d"
 
         android:background="@drawable/d"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="75dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -435,8 +406,6 @@ s
         android:id="@+id/b"
 
         android:background="@drawable/b"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -454,8 +423,6 @@ s
         android:id="@+id/c"
 
         android:background="@drawable/c"
-        android:textStyle="bold"
-        android:textSize="25sp"
         android:layout_width="71dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
