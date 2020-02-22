@@ -127,9 +127,10 @@ StorageTask muploadtask;
                     storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            uploadSong uploadSong=new uploadSong(title.getText().toString(),finalDurationTxt,audioUri.toString());
+                            uploadSong uploadSong=new uploadSong(title.getText().toString(),finalDurationTxt,uri.toString());
                             String uploadId=refSongs.push().getKey();
                             refSongs.child(uploadId).setValue(uploadSong);
+                            Toast.makeText(getApplicationContext(),"Uploaded Successfully",Toast.LENGTH_LONG).show();
                         }
                     });
 
