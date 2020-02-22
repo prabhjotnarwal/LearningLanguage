@@ -12,7 +12,7 @@
         android:layout_width="342dp"
         android:layout_height="73dp"
         android:layout_marginTop="100dp"
-        android:text="Questions"
+
         android:background="@drawable/sound"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
