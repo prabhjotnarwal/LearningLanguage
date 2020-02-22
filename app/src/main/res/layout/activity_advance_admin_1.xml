@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Advance_admin">
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Add video"
+        android:textSize="17dp"
+        android:layout_marginTop="200dp"
+        android:textStyle="italic"
+        />
+
+    <EditText
+        android:id="@+id/addlink"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:hint="Add link here"
+        />
+    <Button
+        android:id="@+id/aDDbtn"
+        android:layout_width="377dp"
+        android:layout_height="60dp"
+        android:text="Add"
+        />
+    <VideoView
+        android:layout_width="377dp"
+        android:layout_height="60dp"
+        android:id="@+id/video"
+        />
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="50dp"
+
+        />
+</LinearLayout>

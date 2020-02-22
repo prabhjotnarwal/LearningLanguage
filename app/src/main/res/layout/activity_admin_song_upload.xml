@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".adminSongUpload">
+
+    <Button
+        android:id="@+id/selectsong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="48dp"
+        android:text="Select"
+        android:onClick="openAudioFile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songtitle" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="179dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="36dp"
+        android:text="Upload Song"
+        android:onClick="uploadAudioToFirebase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar2" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="357dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fileselected" />
+
+    <EditText
+        android:id="@+id/songtitle"
+        android:layout_width="350dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="64dp"
+        android:hint="Song title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fileselected"
+        android:layout_width="154dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="56dp"
+        android:text="No file selected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/selectsong"
+        app:layout_constraintTop_toBottomOf="@+id/songtitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

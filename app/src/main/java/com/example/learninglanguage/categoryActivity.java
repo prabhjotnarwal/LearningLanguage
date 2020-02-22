@@ -29,7 +29,7 @@ ListView lv;
                     public void onItemClick(AdapterView<?> parent, View v,
                                             int position, long id) {
                         Intent intent = new Intent(categoryActivity.this,levelActivity.class);
-                        intent.putExtra("position",position);
+                       // intent.putExtra("position",position);
                         startActivity(intent);
                     }
                 });

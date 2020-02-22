@@ -1,0 +1,56 @@
+package com.example.learninglanguage.admin;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.learninglanguage.R;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class addNewLessons extends AppCompatActivity {
+    private FirebaseDatabase db;
+    private DatabaseReference ref;
+    TextView name;
+    Button add;
+
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_add_new);
+        db = FirebaseDatabase.getInstance();
+        ref = db.getReference("learning");
+
+        add = findViewById(R.id.add);
+        name=findViewById(R.id.name);
+
+
+
+
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                final String name1;
+
+
+                name1 = name.getText().toString();
+                learning learning1 = new learning("", name1);
+                ref.push().setValue(learning1);
+                Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_LONG).show();
+                name.setText(" ");
+                return;
+
+
+            }
+        });
+    }
+}
