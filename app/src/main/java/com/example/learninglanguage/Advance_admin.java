@@ -9,6 +9,6 @@ public class Advance_admin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advance_admin);
+        setContentView(R.layout.activity_advance_admin_1);
     }
 }
