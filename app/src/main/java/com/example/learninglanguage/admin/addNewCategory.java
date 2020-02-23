@@ -26,7 +26,7 @@ public class addNewCategory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new);
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference("learning");
+        ref = database.getReference("category");
 
         add = findViewById(R.id.add);
         name=findViewById(R.id.name);
@@ -43,8 +43,8 @@ public class addNewCategory extends AppCompatActivity {
 
 
                 name1 = name.getText().toString();
-                learning learning1 = new learning("", name1);
-                ref.push().setValue(learning1);
+                uploadCategory uploadCategory1 = new uploadCategory(name1);
+                ref.push().setValue(uploadCategory1);
                 Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_LONG).show();
                 name.setText(" ");
                 return;

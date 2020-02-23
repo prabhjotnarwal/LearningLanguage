@@ -15,7 +15,7 @@ ListView lv;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
         lv = findViewById(R.id.listview1);
-        String[] mobileArray = {"Alphabets","Numbers", "Fruit", "Vegetable", "Body Part Names","Shape","Toy","Transport","Bird","Animal"};
+        String[] mobileArray = {"Alphabets","color", "Fruit", "Vegetable", "Body Part Names","Shape","Toy","Transport","Bird","Animal"};
         int flags[] = {R.drawable.abc, R.drawable.numbers, R.drawable.fruits, R.drawable.veg,R.drawable.body,R.drawable.shape,R.drawable.toys,R.drawable.transport,R.drawable.bird,R.drawable.animals};
 
         categoryAdapter customAdapter = new categoryAdapter(getApplicationContext(), mobileArray, flags);
