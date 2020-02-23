@@ -12,7 +12,7 @@ import com.example.learninglanguage.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class addNewLessons extends AppCompatActivity {
+public class addNewCategory extends AppCompatActivity {
     private FirebaseDatabase db;
     private DatabaseReference ref;
     TextView name;
