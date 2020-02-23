@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class addNewCategory extends AppCompatActivity {
-    private FirebaseDatabase db;
+    private FirebaseDatabase database;
     private DatabaseReference ref;
     TextView name;
     Button add;
@@ -25,8 +25,8 @@ public class addNewCategory extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new);
-        db = FirebaseDatabase.getInstance();
-        ref = db.getReference("learning");
+        database = FirebaseDatabase.getInstance();
+        ref = database.getReference("learning");
 
         add = findViewById(R.id.add);
         name=findViewById(R.id.name);
