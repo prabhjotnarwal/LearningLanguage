@@ -7,36 +7,53 @@
     android:background="@drawable/bg"
     tools:context=".adminDashboard">
 
+
     <Button
         android:id="@+id/cAdd"
-        android:layout_width="206dp"
+        android:layout_width="match_parent"
         android:layout_height="58dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/btn_rounded"
         android:text="Add Categories"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/lAdd"
-        android:layout_width="204dp"
+        android:layout_width="match_parent"
         android:layout_height="61dp"
         android:layout_marginTop="44dp"
+        android:background="@drawable/btn_rounded"
         android:text="Add Lessons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cAdd" />
+        app:layout_constraintTop_toBottomOf="@+id/leAdd" />
 
     <Button
         android:id="@+id/tAdd"
-        android:layout_width="206dp"
+        android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginTop="48dp"
         android:text="Add Tests"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lAdd" />
+        app:layout_constraintTop_toBottomOf="@+id/lAdd"
+        android:background="@drawable/btn_rounded"/>
+
+    <Button
+        android:id="@+id/leAdd"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/btn_rounded"
+        android:text="Add Levels"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cAdd" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
