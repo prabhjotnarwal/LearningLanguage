@@ -8,6 +8,22 @@
     tools:context=".alphaLesson2">
 
     <Button
+        android:id="@+id/test2"
+        android:layout_width="258dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/btnimg1"
+        android:text="Ready For Test"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/y"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/z"
         android:background="@drawable/z1"
         android:layout_width="71dp"
