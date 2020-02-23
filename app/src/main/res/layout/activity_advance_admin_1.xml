@@ -12,9 +12,11 @@
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:text="Add video"
-        android:textSize="17dp"
+        android:textSize="30dp"
         android:layout_marginTop="200dp"
-        android:textStyle="italic"
+        android:textStyle="bold"
+        android:textColor="#48D1CC"
+
         />
 
     <EditText
@@ -27,19 +29,8 @@
         android:id="@+id/aDDbtn"
         android:layout_width="377dp"
         android:layout_height="60dp"
-        android:text="Add"
+        android:text="Add Video URL"
         />
-    <VideoView
-        android:layout_width="377dp"
-        android:layout_height="60dp"
-        android:id="@+id/video"
-        />
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="50dp"
 
-        />
+
 </LinearLayout>
