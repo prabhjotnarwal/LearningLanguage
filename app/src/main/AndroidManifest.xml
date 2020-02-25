@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.learninglanguage">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".colorActivity"></activity>
         <activity android:name=".adminSongUpload">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,26 +20,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".basic_test"></activity>
+        <activity android:name=".basic_test" />
         <activity android:name=".intermediate_test" />
         <activity android:name=".adminDashboard" />
         <activity android:name=".alphaLesson2" />
         <activity android:name=".levelActivity" />
         <activity android:name=".alphaLesson1" />
-        <activity android:name=".categoryActivity">
-
-        </activity>
-        <activity android:name=".Advance_admin"></activity>
-        <activity android:name=".AdvanceLevel"></activity>
+        <activity android:name=".categoryActivity"></activity>
+        <activity android:name=".Advance_admin" />
+        <activity android:name=".AdvanceLevel" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".splashs" >
-
-        </activity>
+        <activity android:name=".splashs"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>
