@@ -54,7 +54,7 @@ public class admin_level extends AppCompatActivity {
             //To create id for data in database
             String id = db.push().getKey();
 
-            uploadLevel lev = new uploadLevel(id,name);
+            uploadLevel lev = new uploadLevel(name);
 
             db.child(id).setValue(lev);
 
