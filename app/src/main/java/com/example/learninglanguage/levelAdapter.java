@@ -17,40 +17,26 @@ import java.util.List;
 public class levelAdapter extends RecyclerView.Adapter<levelViewHolder>{
     private Context context;
     private List<uploadLevel> levelList;
-    private List<String> idList;
-    public levelAdapter(Context context, List<uploadLevel> levelList, List<String> idList) {
+
+    public levelAdapter(Context context, List<uploadLevel> levelList) {
         this.context = context;
         this.levelList = levelList;
-        this.idList = idList;
+
     }
+
 
     @NonNull
     @Override
-    public levelViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new levelViewHolder(LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.layout_levels, parent, false));
+    public levelViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view=LayoutInflater.from(context).inflate(R.layout.layout_levels,viewGroup,false);
+        return new levelViewHolder(view);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull levelViewHolder holder, int position) {
         final uploadLevel uplevel = levelList.get(position);
-        final String id = idList.get(position);
-
-
         holder.levelName.setText(uplevel.getLevelName());
-
-        holder.layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Gson gson = new Gson();
-                String jsonString = gson.toJson(uplevel);
-                Intent intent = new Intent(context, UpdateActivity.class);
-                intent.putExtra("level", jsonString);
-                intent.putExtra("key", id);
-                intent.putExtra("levelName",uplevel.getLevelName());
-                context.startActivity(intent);
-            }
-        });
     }
 
     @Override
