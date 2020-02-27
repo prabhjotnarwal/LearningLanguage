@@ -22,132 +22,132 @@ public class Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        txt1 = findViewById(R.id.textView4);
-        txt2 = findViewById(R.id.textView5);
-        txt3 = findViewById(R.id.textView6);
-        txt4 = findViewById(R.id.textView7);
-        txt5 = findViewById(R.id.textView8);
-        txt6 = findViewById(R.id.textView9);
-
-        String str1 = txt1.getText().toString();
-        String str2 = txt2.getText().toString();
-        String str3 = txt3.getText().toString();
-        String str4 = txt4.getText().toString();
-        String str5 = txt5.getText().toString();
-        String str6 = txt6.getText().toString();
-
-        db = FirebaseDatabase.getInstance().getReference("Question");
-
-        btn1 = findViewById(R.id.btn1);
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                addQuestion();
-            }
-        });
-
-    }
-    private void addQuestion(){
-
-        String str1 = txt1.getText().toString();
-        String str2 = txt2.getText().toString();
-        String str3 = txt3.getText().toString();
-        String str4 = txt4.getText().toString();
-        String str5 = txt5.getText().toString();
-        String str6 = txt6.getText().toString();
-
-        if (!TextUtils.isEmpty(str1)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str1);
-
-            db.child(id).setValue(lev);
-
-            txt1.setText("");
-
-            Toast.makeText(this, "Question Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Question", Toast.LENGTH_LONG).show();
-        }
-        if (!TextUtils.isEmpty(str2)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str2);
-
-            db.child(id).setValue(lev);
-
-            txt2.setText("");
-
-            Toast.makeText(this, "Option1 Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Option1", Toast.LENGTH_LONG).show();
-        }
-        if (!TextUtils.isEmpty(str3)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str3);
-
-            db.child(id).setValue(lev);
-
-            txt3.setText("");
-
-            Toast.makeText(this, "Option2 Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Option2", Toast.LENGTH_LONG).show();
-        }
-
-        if (!TextUtils.isEmpty(str4)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str4);
-
-            db.child(id).setValue(lev);
-
-            txt4.setText("");
-
-            Toast.makeText(this, "Option3 Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Option3", Toast.LENGTH_LONG).show();
-        }
-        if (!TextUtils.isEmpty(str5)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str5);
-
-            db.child(id).setValue(lev);
-
-            txt5.setText("");
-
-            Toast.makeText(this, "Option4 Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Option4", Toast.LENGTH_LONG).show();
-        }
-        if (!TextUtils.isEmpty(str6)) {
-            //To create id for data in database
-            String id = db.push().getKey();
-
-            uploadLevel lev = new uploadLevel(id, str6);
-
-            db.child(id).setValue(lev);
-
-            txt6.setText("");
-
-            Toast.makeText(this, "Answer Added", Toast.LENGTH_LONG).show();
-        } else {
-
-            Toast.makeText(this, "Please enter Answer", Toast.LENGTH_LONG).show();
-        }
+//        txt1 = findViewById(R.id.textView4);
+//        txt2 = findViewById(R.id.textView5);
+//        txt3 = findViewById(R.id.textView6);
+//        txt4 = findViewById(R.id.textView7);
+//        txt5 = findViewById(R.id.textView8);
+//        txt6 = findViewById(R.id.textView9);
+//
+//        String str1 = txt1.getText().toString();
+//        String str2 = txt2.getText().toString();
+//        String str3 = txt3.getText().toString();
+//        String str4 = txt4.getText().toString();
+//        String str5 = txt5.getText().toString();
+//        String str6 = txt6.getText().toString();
+//
+//        db = FirebaseDatabase.getInstance().getReference("Question");
+//
+//        btn1 = findViewById(R.id.btn1);
+//        btn1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                addQuestion();
+//            }
+//        });
+//
+//    }
+//    private void addQuestion(){
+//
+//        String str1 = txt1.getText().toString();
+//        String str2 = txt2.getText().toString();
+//        String str3 = txt3.getText().toString();
+//        String str4 = txt4.getText().toString();
+//        String str5 = txt5.getText().toString();
+//        String str6 = txt6.getText().toString();
+//
+//        if (!TextUtils.isEmpty(str1)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str1);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt1.setText("");
+//
+//            Toast.makeText(this, "Question Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Question", Toast.LENGTH_LONG).show();
+//        }
+//        if (!TextUtils.isEmpty(str2)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str2);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt2.setText("");
+//
+//            Toast.makeText(this, "Option1 Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Option1", Toast.LENGTH_LONG).show();
+//        }
+//        if (!TextUtils.isEmpty(str3)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str3);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt3.setText("");
+//
+//            Toast.makeText(this, "Option2 Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Option2", Toast.LENGTH_LONG).show();
+//        }
+//
+//        if (!TextUtils.isEmpty(str4)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str4);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt4.setText("");
+//
+//            Toast.makeText(this, "Option3 Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Option3", Toast.LENGTH_LONG).show();
+//        }
+//        if (!TextUtils.isEmpty(str5)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str5);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt5.setText("");
+//
+//            Toast.makeText(this, "Option4 Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Option4", Toast.LENGTH_LONG).show();
+//        }
+//        if (!TextUtils.isEmpty(str6)) {
+//            //To create id for data in database
+//            String id = db.push().getKey();
+//
+//            uploadLevel lev = new uploadLevel(id, str6);
+//
+//            db.child(id).setValue(lev);
+//
+//            txt6.setText("");
+//
+//            Toast.makeText(this, "Answer Added", Toast.LENGTH_LONG).show();
+//        } else {
+//
+//            Toast.makeText(this, "Please enter Answer", Toast.LENGTH_LONG).show();
+        //}
     }
 }
 

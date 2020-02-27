@@ -5,12 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".categoryActivity">
+    tools:context=".admin.categoryListActivity">
 
-    <ListView
-        android:id="@+id/listview1"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/crecyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="22dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
