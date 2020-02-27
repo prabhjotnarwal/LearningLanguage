@@ -10,21 +10,14 @@
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg">
 
-        <ImageView
-            android:id="@+id/learningImage"
-            android:layout_width="94dp"
-            android:layout_height="87dp"
-            android:padding="5dp"
-            android:src="@drawable/b1" />
 
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/Cname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_marginStart="48dp"
             android:layout_marginTop="40dp"
-            android:layout_toEndOf="@+id/learningImage"
             android:padding="5dp"
             android:text="@string/name_string"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu"
