@@ -13,6 +13,9 @@
         <activity android:name=".viewLevels">
 
         </activity>
+        <activity android:name=".Question">
+            
+        </activity>
         <activity android:name=".admin.categoryListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,14 +38,13 @@
 
 
         </activity>
-        <activity android:name=".categoryActivity" >
-
-        </activity>
         <activity android:name=".Advance_admin" />
         <activity android:name=".AdvanceLevel" />
         <activity android:name=".colorActivity"></activity>
         <activity android:name=".fruitActivity"></activity>
-        <activity android:name=".admin.addNewCategory" />
+        <activity android:name=".admin.addNewCategory" >
+
+        </activity>
 
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
