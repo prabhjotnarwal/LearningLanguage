@@ -41,7 +41,7 @@ public class basic_test extends AppCompatActivity {
         b3=(Button)findViewById(R.id.optc);
         b4=(Button)findViewById(R.id.optd);
         b5=(Button)findViewById(R.id.next);
-        Question=(TextView)findViewById(R.id.textView);
+        Question=(TextView)findViewById(R.id.quesTxt);
 
     }
     public void updateQuestion()
@@ -50,7 +50,7 @@ public class basic_test extends AppCompatActivity {
 
         if(computercount>10)
         {
-            Toast.makeText(getApplicationContext(),"Game Over",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Test Over",Toast.LENGTH_LONG).show();
             Intent myintent= new Intent(basic_test.this,testResult.class);
             myintent.putExtra("total",String.valueOf(total));
             myintent.putExtra("correct",String.valueOf(correct));
@@ -60,7 +60,7 @@ public class basic_test extends AppCompatActivity {
         }
         else
         {
-            databaseReference = FirebaseDatabase.getInstance().getReference().child("Questions").child(String.valueOf(computercount));
+            databaseReference = FirebaseDatabase.getInstance().getReference().child("Question").child(String.valueOf(computercount));
             total++;
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override

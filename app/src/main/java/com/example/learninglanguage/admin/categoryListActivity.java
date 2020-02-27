@@ -19,45 +19,57 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class learningListActivity  extends AppCompatActivity {
+public class categoryListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private learningListAdapter adapter;
+    private categoryListAdapter adapter;
+    public static final String EXTRA_CATEGORY="categoryName";
     private FirebaseDatabase db;
     private DatabaseReference ref;
-    private List<learning> learninglist = new ArrayList<>();
+    private List<uploadCategory> categoryList = new ArrayList<>();
     private List<String> idList = new ArrayList<>();
-    boolean learningExists = false;
+    boolean categoryExists = false;
+    ValueEventListener valueEventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learning_list);
-        recyclerView = findViewById(R.id.recyclerview);
+        setContentView(R.layout.activity_category_list);
+        recyclerView = findViewById(R.id.crecyclerview);
+        recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        adapter=new categoryListAdapter(categoryListActivity.this, categoryList,idList);
+        recyclerView.setAdapter(adapter);
+
 
         db = FirebaseDatabase.getInstance();
-        ref = db.getReference("learning");
+        ref = db.getReference("category");
 
-        ref.addValueEventListener(new ValueEventListener() {
+        valueEventListener=ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                categoryList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    learning learning= ds.getValue(learning.class);
-                    learninglist.add(learning);
+                    uploadCategory category= ds.getValue(uploadCategory.class);
+                    category.setcKey(ds.getKey());
+                    categoryList.add(category);
                     idList.add(ds.getKey());
-                    adapter = new learningListAdapter(learningListActivity.this, learninglist, idList);
-                    recyclerView.setAdapter(adapter);
-                }
+
+                } adapter.notifyDataSetChanged();
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(learningListActivity.this, "There was some problem. Please try again later....", Toast.LENGTH_SHORT).show();
-                learningExists=false;
+                Toast.makeText(getApplicationContext(), ""+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                categoryExists=false;
             }
 
         });
+    }
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        ref.removeEventListener(valueEventListener);
     }
 }
