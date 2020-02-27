@@ -8,7 +8,6 @@ import android.widget.Button;
 public class intermediate_test extends AppCompatActivity {
     Button b1,b2,b3,b4,b5,b6;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

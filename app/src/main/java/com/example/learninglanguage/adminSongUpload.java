@@ -130,6 +130,7 @@ StorageTask muploadtask;
                             uploadSong uploadSong=new uploadSong(title.getText().toString(),finalDurationTxt,uri.toString());
                             String uploadId=refSongs.push().getKey();
                             refSongs.child(uploadId).setValue(uploadSong);
+
                             Toast.makeText(getApplicationContext(),"Uploaded Successfully",Toast.LENGTH_LONG).show();
                         }
                     });

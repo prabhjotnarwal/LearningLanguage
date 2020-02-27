@@ -23,15 +23,15 @@ Button addbtn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_advance_admin_1);
         db=FirebaseDatabase.getInstance();
-        ref =db.getReference("url");
+        ref =db.getReference("video");
         addbtn=findViewById(R.id.aDDbtn);
+        url=findViewById(R.id.addlink);
         addbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                final  String url1 ;
-                url1 =url.getText().toString();
-                Upload_video uploadVideo = new Upload_video(url1);
+
+                Upload_video uploadVideo = new Upload_video(url.getText().toString());
                 ref.push().setValue(uploadVideo);
                 Toast.makeText(getApplicationContext(),"Added successfully",Toast.LENGTH_LONG).show();
                 url.setText("");
