@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -29,6 +31,7 @@ private ProgressBar progressBar1;
     private FirebaseDatabase db;
     private DatabaseReference ref;
     private List<uploadLevel> lUpload=new ArrayList<>();
+
   ValueEventListener valueEventListener;
     boolean levelExists = false;
     @Override
@@ -52,8 +55,7 @@ valueEventListener=ref.addValueEventListener(new ValueEventListener() {
                     uploadLevel upLevel= dss.getValue(uploadLevel.class);
                     upLevel.setlKey(dss.getKey());
                     lUpload.add(upLevel);
-//                    adapter = new levelAdapter(viewLevels.this, levelList, idList);
-//                    lrc.setAdapter(adapter);
+
                 }
                 adapter.notifyDataSetChanged();
                 progressBar1.setVisibility(View.GONE);
