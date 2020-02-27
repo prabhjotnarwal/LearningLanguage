@@ -50,7 +50,7 @@ public class basic_test extends AppCompatActivity {
 
         if(computercount>10)
         {
-            Toast.makeText(getApplicationContext(),"Game Over",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Test Over",Toast.LENGTH_LONG).show();
             Intent myintent= new Intent(basic_test.this,testResult.class);
             myintent.putExtra("total",String.valueOf(total));
             myintent.putExtra("correct",String.valueOf(correct));
