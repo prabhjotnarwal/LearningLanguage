@@ -79,8 +79,8 @@
         android:height="5dp"
         android:background="@drawable/stawberry"
         android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="446dp" />
+        app:layout_constraintBottom_toTopOf="@+id/gr"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/man"
