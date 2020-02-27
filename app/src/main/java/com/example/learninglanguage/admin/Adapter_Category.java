@@ -1,19 +1,16 @@
 package com.example.learninglanguage.admin;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.learninglanguage.R;
 
+import com.example.learninglanguage.R;
 import com.google.gson.Gson;
 
 import java.util.List;
@@ -22,7 +19,9 @@ public class Adapter_Category extends RecyclerView.Adapter<Adapter_Category.View
         private List<uploadCategory> categoryList;
         private List<String> idList;
         RelativeLayout layout;
-        public Adapter_Category(Context context, List<uploadCategory> categoryList,List<String> idList) {
+
+
+    public Adapter_Category(Context context, List<uploadCategory> categoryList,List<String> idList) {
             this.context = context;
             this.categoryList = categoryList;
             this.idList=idList;
@@ -39,7 +38,7 @@ public class Adapter_Category extends RecyclerView.Adapter<Adapter_Category.View
         }
 
     @Override
-    public void onBindViewHolder(@NonNull Adapter_Category.View_category holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter_Category.View_category holder, final int position) {
         final uploadCategory uploadCategory = categoryList.get(position);
         final String id = idList.get(position);
         holder.CategoryName.setText(uploadCategory.getCategoryName());
@@ -63,7 +62,7 @@ public class Adapter_Category extends RecyclerView.Adapter<Adapter_Category.View
                 }
                 else
                 {
-                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    Intent intent = new Intent(context, noDisplay.class);
                     context.startActivity(intent);
                 }
             }
