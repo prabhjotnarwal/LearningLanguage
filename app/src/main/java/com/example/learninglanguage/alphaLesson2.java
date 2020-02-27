@@ -2,13 +2,14 @@ package com.example.learninglanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class alphaLesson2 extends AppCompatActivity {
-    private Button q1,w1,e1,r1,t1,y1,u1,i1,o1,p1,a1,s1,d1,f1,g1,h1,j1,k1,l1,z1,x1,c1,v1,b1,n1,m1;
+    private Button q1,w1,e1,r1,t1,y1,u1,i1,o1,p1,a1,s1,d1,f1,g1,h1,j1,k1,l1,z1,x1,c1,v1,b1,n1,m1,test;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -561,8 +562,16 @@ public class alphaLesson2 extends AppCompatActivity {
                 } catch(Exception e) { e.printStackTrace(); }
             }
         });
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(alphaLesson2.this,intermediate_test.class);
+                startActivity(intent);
+            }
+        });
     }
     private void initializeUI() {
+        test=findViewById(R.id.test2);
         a1=findViewById(R.id.a);
         b1=findViewById(R.id.b);
         c1=findViewById(R.id.c);

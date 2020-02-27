@@ -12,8 +12,8 @@ import com.example.learninglanguage.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class addNewLessons extends AppCompatActivity {
-    private FirebaseDatabase db;
+public class addNewCategory extends AppCompatActivity {
+    private FirebaseDatabase database;
     private DatabaseReference ref;
     TextView name;
     Button add;
@@ -25,8 +25,8 @@ public class addNewLessons extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new);
-        db = FirebaseDatabase.getInstance();
-        ref = db.getReference("learning");
+        database = FirebaseDatabase.getInstance();
+        ref = database.getReference("category");
 
         add = findViewById(R.id.add);
         name=findViewById(R.id.name);
@@ -43,8 +43,8 @@ public class addNewLessons extends AppCompatActivity {
 
 
                 name1 = name.getText().toString();
-                learning learning1 = new learning("", name1);
-                ref.push().setValue(learning1);
+                uploadCategory uploadCategory1 = new uploadCategory(name1);
+                ref.push().setValue(uploadCategory1);
                 Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_LONG).show();
                 name.setText(" ");
                 return;

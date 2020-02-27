@@ -22,21 +22,21 @@ public class DashboardActivity extends AppCompatActivity{
             b1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(DashboardActivity.this, addNewLessons.class);
+                    Intent intent = new Intent(DashboardActivity.this, addNewCategory.class);
                     startActivity(intent);
                 }
             });
             b2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(DashboardActivity.this, addNewLessons.class);
+                    Intent intent = new Intent(DashboardActivity.this, addNewCategory.class);
                     startActivity(intent);
                 }
             });
             b2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(DashboardActivity.this, addNewLessons.class);
+                    Intent intent = new Intent(DashboardActivity.this, addNewCategory.class);
                     startActivity(intent);
                 }
             });
