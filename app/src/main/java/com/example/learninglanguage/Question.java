@@ -14,8 +14,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class Question extends AppCompatActivity {
-EditText txt1,txt2,txt3,txt4,txt5;
-Button btn1;
+    EditText txt1,txt2,txt3,txt4,txt5,txt6;
+    Button btn1;
     DatabaseReference db;
 
     @Override
@@ -27,12 +27,16 @@ Button btn1;
         txt3 = findViewById(R.id.textView6);
         txt4 = findViewById(R.id.textView7);
         txt5 = findViewById(R.id.textView8);
+        txt6 = findViewById(R.id.textView9);
+
         String str1 = txt1.getText().toString();
         String str2 = txt2.getText().toString();
         String str3 = txt3.getText().toString();
         String str4 = txt4.getText().toString();
         String str5 = txt5.getText().toString();
-        db = FirebaseDatabase.getInstance().getReference("level");
+        String str6 = txt6.getText().toString();
+
+        db = FirebaseDatabase.getInstance().getReference("Question");
 
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +55,7 @@ Button btn1;
         String str3 = txt3.getText().toString();
         String str4 = txt4.getText().toString();
         String str5 = txt5.getText().toString();
+        String str6 = txt6.getText().toString();
 
         if (!TextUtils.isEmpty(str1)) {
             //To create id for data in database
@@ -128,6 +133,21 @@ Button btn1;
 
             Toast.makeText(this, "Please enter Option4", Toast.LENGTH_LONG).show();
         }
+        if (!TextUtils.isEmpty(str6)) {
+            //To create id for data in database
+            String id = db.push().getKey();
+
+            uploadLevel lev = new uploadLevel(id, str6);
+
+            db.child(id).setValue(lev);
+
+            txt6.setText("");
+
+            Toast.makeText(this, "Answer Added", Toast.LENGTH_LONG).show();
+        } else {
+
+            Toast.makeText(this, "Please enter Answer", Toast.LENGTH_LONG).show();
+        }
     }
-    }
+}
 
