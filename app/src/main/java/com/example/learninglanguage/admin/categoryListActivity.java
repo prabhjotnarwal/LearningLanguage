@@ -22,22 +22,23 @@ import java.util.List;
 public class categoryListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private categoryListAdapter adapter;
+    public static final String EXTRA_CATEGORY="categoryName";
     private FirebaseDatabase db;
     private DatabaseReference ref;
-    private List<uploadCategory> learninglist = new ArrayList<>();
+    private List<uploadCategory> categoryList = new ArrayList<>();
     private List<String> idList = new ArrayList<>();
-    boolean learningExists = false;
+    boolean categoryExists = false;
     ValueEventListener valueEventListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_learning_list);
+        setContentView(R.layout.activity_category_list);
         recyclerView = findViewById(R.id.crecyclerview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        adapter=new categoryListAdapter(categoryListActivity.this,learninglist,idList);
+        adapter=new categoryListAdapter(categoryListActivity.this, categoryList,idList);
         recyclerView.setAdapter(adapter);
 
 
@@ -47,11 +48,11 @@ public class categoryListActivity extends AppCompatActivity {
         valueEventListener=ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                learninglist.clear();
+                categoryList.clear();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                     uploadCategory category= ds.getValue(uploadCategory.class);
                     category.setcKey(ds.getKey());
-                    learninglist.add(category);
+                    categoryList.add(category);
                     idList.add(ds.getKey());
 
                 } adapter.notifyDataSetChanged();
@@ -61,7 +62,7 @@ public class categoryListActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getApplicationContext(), ""+databaseError.getMessage(), Toast.LENGTH_SHORT).show();
-                learningExists=false;
+                categoryExists=false;
             }
 
         });
