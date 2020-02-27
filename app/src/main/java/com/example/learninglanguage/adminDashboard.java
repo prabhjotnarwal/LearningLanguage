@@ -60,7 +60,7 @@ public class adminDashboard extends AppCompatActivity {
                         }
                         if (position == 4)
                         {
-                            Intent intent = new Intent(adminDashboard.this, AddTest.class);
+                            Intent intent = new Intent(adminDashboard.this, Question.class);
                             intent.putExtra("position",position);
                             startActivity(intent);
                         }
