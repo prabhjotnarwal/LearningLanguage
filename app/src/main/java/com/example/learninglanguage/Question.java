@@ -48,13 +48,13 @@ private DatabaseReference ref;
                 ref.push().setValue(que);
 
 
-                        Toast.makeText(getApplicationContext(), "Question Added", Toast.LENGTH_LONG).show();
-                finish();
+                Toast.makeText(getApplicationContext(), "Question Added", Toast.LENGTH_LONG).show();
+
                 return;
             }
         });
 
     }
-    
+
 }
 
