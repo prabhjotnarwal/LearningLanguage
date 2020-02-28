@@ -14,18 +14,18 @@
 
         </activity>
         <activity android:name=".Question">
-            
+
         </activity>
         <activity android:name=".admin.categoryListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".adminSongUpload" >
+
         </activity>
-        <activity android:name=".basic_test" />
+        <activity android:name=".basic_test" >
+
+
+        </activity>
         <activity android:name=".intermediate_test" />
         <activity android:name=".adminDashboard" />
         <activity android:name=".alphaLesson2" >
@@ -40,8 +40,12 @@
         </activity>
         <activity android:name=".Advance_admin" />
         <activity android:name=".AdvanceLevel" />
-        <activity android:name=".colorActivity"></activity>
-        <activity android:name=".fruitActivity"></activity>
+        <activity android:name=".colorActivity">
+
+        </activity>
+        <activity android:name=".fruitActivity">
+
+        </activity>
         <activity android:name=".admin.addNewCategory" >
 
         </activity>
@@ -49,7 +53,13 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
-        <activity android:name=".splashs" />
+        <activity android:name=".splashs" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
