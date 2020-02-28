@@ -26,7 +26,7 @@ public class basic_test extends AppCompatActivity {
     TextView quest;
     Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 1;
+    int total = 0;
     int wrong = 0;
     DatabaseReference reference;
 
@@ -39,21 +39,24 @@ public class basic_test extends AppCompatActivity {
         b2 = (Button) findViewById(R.id.optb);
         b3 = (Button) findViewById(R.id.optc);
         b4 = (Button) findViewById(R.id.optd);
-        b5 = (Button) findViewById(R.id.next);
+
         quest = (TextView) findViewById(R.id.quesTxt);
         updateQuestion();
     }
 
     private void updateQuestion() {
         total++;
-        if (total > 2) {
+        if (total > 7) {
 // result
+            Intent i=new Intent(getApplicationContext(),testResult.class);
+            startActivity(i);
         } else {
-            reference = FirebaseDatabase.getInstance().getReference("Question");
+            reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
                         String ques = ds.child("question").getValue().toString();
                         final String answer = ds.child("answer").getValue().toString();
                         final String op1 = ds.child("option1").getValue().toString();
