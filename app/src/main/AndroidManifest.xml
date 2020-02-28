@@ -13,19 +13,22 @@
         <activity android:name=".viewLevels">
 
         </activity>
-        <activity android:name=".Question">
-            
-        </activity>
+<activity android:name=".Question">
+
+</activity>
         <activity android:name=".admin.categoryListActivity">
+
+        </activity>
+        <activity android:name=".adminSongUpload" >
+
+        </activity>
+        <activity android:name=".basic_test" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".adminSongUpload" >
-        </activity>
-        <activity android:name=".basic_test" />
         <activity android:name=".intermediate_test" />
         <activity android:name=".adminDashboard" />
         <activity android:name=".alphaLesson2" >

@@ -132,6 +132,7 @@ StorageTask muploadtask;
                             refSongs.child(uploadId).setValue(uploadSong);
 
                             Toast.makeText(getApplicationContext(),"Uploaded Successfully",Toast.LENGTH_LONG).show();
+                            title.setText(" ");
                         }
                     });
 
