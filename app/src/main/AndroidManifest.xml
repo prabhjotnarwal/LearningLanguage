@@ -17,11 +17,7 @@
             
         </activity>
         <activity android:name=".admin.categoryListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".adminSongUpload" >
         </activity>
@@ -32,7 +28,11 @@
 
         </activity>
         <activity android:name=".admin_level" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".alphaLesson1" >
 
