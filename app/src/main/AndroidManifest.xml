@@ -9,46 +9,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nothingToDisplay"></activity>
         <activity android:name=".viewLevels">
 
         </activity>
-        <activity android:name=".admin.categoryListActivity">
-
-        </activity>
-        <activity android:name=".adminSongUpload" >
-        </activity>
+        <activity android:name=".adminSongUpload" />
         <activity android:name=".basic_test" />
-        <activity android:name=".Question" >
+        <activity android:name=".intermediate_test" />
+        <activity android:name=".adminDashboard" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intermediate_test" />
-        <activity android:name=".adminDashboard" />
-        <activity android:name=".alphaLesson2" >
-
-        </activity>
-        <activity android:name=".admin_level" >
-
-        </activity>
-        <activity android:name=".alphaLesson1" >
-        </activity>
+        <activity android:name=".alphaLesson2" />
+        <activity android:name=".admin_level" />
+        <activity android:name=".alphaLesson1" />
+        <activity android:name=".categoryActivity" />
         <activity android:name=".Advance_admin" />
         <activity android:name=".AdvanceLevel" />
-        <activity android:name=".colorActivity"></activity>
-        <activity android:name=".fruitActivity"></activity>
-        <activity android:name=".admin.addNewCategory" />
+        <activity android:name=".colorActivity">
 
+        </activity>
+        <activity android:name=".fruitActivity">
+
+        </activity>
+        <activity android:name=".admin.addNewCategory" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".splashs" />
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

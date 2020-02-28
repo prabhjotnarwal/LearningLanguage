@@ -6,50 +6,71 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListView;
+
+import com.example.learninglanguage.admin.addNewCategory;
 
 public class adminDashboard extends AppCompatActivity {
 
-    Button b1,b2,b3,b4,b5,b6;
+    ListView lv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_dashboard);
 
-        b1=findViewById(R.id.cAdd);
-        b2=findViewById(R.id.lAdd);
-        b3=findViewById(R.id.tAdd);
-        b4 = findViewById(R.id.leAdd);
-        b5=findViewById(R.id.vadd);
-        b6=findViewById(R.id.sadd);
+        lv = findViewById(R.id.lv1);
+        String[] mobileArray = {"Manage Category","Manage Level", "Add Videos", "Add Audios", "Manage Tests"};
+        int flags[] = {R.drawable.admin_manage_category, R.drawable.admin_manage_levels, R.drawable.admin_add_video, R.drawable.admin_add_audio,R.drawable.admin_manage_tests};
 
-        b4.setOnClickListener(new View.OnClickListener() {
+
+        AdminDashboardAdapter customAdapter = new AdminDashboardAdapter(getApplicationContext(), mobileArray,flags);
+        lv.setAdapter(customAdapter);
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View v,
+                                            int position, long id) {
 
-                Intent intent = new Intent(adminDashboard.this,admin_level.class);
-                startActivity(intent);
+                        if (position == 0)
+                        {
+                            Intent intent = new Intent(adminDashboard.this, addNewCategory.class);
+                            intent.putExtra("position",position);
+                            startActivity(intent);
+                        }
+                        if (position == 1)
+                        {
+                            Intent intent = new Intent(adminDashboard.this, admin_level.class);
+                            intent.putExtra("position",position);
+                            startActivity(intent);
+                        }
+                        if (position == 2)
+                        {
+                            Intent intent = new Intent(adminDashboard.this, Advance_admin.class);
+                            intent.putExtra("position",position);
+                            startActivity(intent);
+                        }
+                        if (position == 3)
+                        {
+                            Intent intent = new Intent(adminDashboard.this, adminSongUpload.class);
+                            intent.putExtra("position",position);
+                            startActivity(intent);
+                        }
+                        if (position == 4)
+                        {
+                            Intent intent = new Intent(adminDashboard.this, AddTest.class);
+                            intent.putExtra("position",position);
+                            startActivity(intent);
+                        }
 
+                    }
+                });
             }
         });
-        b6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(adminDashboard.this,adminSongUpload.class);
-                startActivity(intent);
-            }
-        });
 
-        b5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                Intent intent = new Intent(adminDashboard.this,Advance_admin.class);
-                startActivity(intent);
-
-            }
-        });
     }
 }
