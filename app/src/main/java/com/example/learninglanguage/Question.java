@@ -7,7 +7,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
@@ -22,12 +21,12 @@ public class Question extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
-        txt1 = findViewById(R.id.textView4);
-        txt2 = findViewById(R.id.textView5);
-        txt3 = findViewById(R.id.textView6);
-        txt4 = findViewById(R.id.textView7);
-        txt5 = findViewById(R.id.textView8);
-        txt6 = findViewById(R.id.textView9);
+        txt1 = findViewById(R.id.question);
+        txt2 = findViewById(R.id.option1);
+        txt3 = findViewById(R.id.option3);
+        txt4 = findViewById(R.id.option2);
+        txt5 = findViewById(R.id.option4);
+        txt6 = findViewById(R.id.canswer);
 
         String str1 = txt1.getText().toString();
         String str2 = txt2.getText().toString();
@@ -61,7 +60,7 @@ public class Question extends AppCompatActivity {
             //To create id for data in database
             String id = db.push().getKey();
 
-            uploadLevel lev = new uploadLevel(id, str1);
+            upload_question lev = new uploadLevel(id, str1);
 
             db.child(id).setValue(lev);
 
