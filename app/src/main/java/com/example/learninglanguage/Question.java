@@ -59,7 +59,6 @@ private DatabaseReference ref;
 
 
             //To create id for data in database
-            String id = db.push().getKey();
 
             upload_question que = new upload_question(str1, str2, str3, str4, str5, str6);
 
