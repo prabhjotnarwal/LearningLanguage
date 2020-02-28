@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.learninglanguage.admin.categoryListActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -100,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);
-                                Intent intent = new Intent(LoginActivity.this, categoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, categoryListActivity.class);
                                 startActivity(intent);
                             }
                         }

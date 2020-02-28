@@ -9,6 +9,8 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import static com.example.learninglanguage.viewLevels.EXTRA_LEVEL;
+
 public class MainActivity extends AppCompatActivity {
 
     Button rBtn, lBtn;

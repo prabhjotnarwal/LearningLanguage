@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -24,11 +26,12 @@ import java.util.List;
 public class viewLevels extends AppCompatActivity {
 private RecyclerView lrc;
 private ProgressBar progressBar1;
-
+public static final String EXTRA_LEVEL="levelName";
     private levelAdapter adapter;
     private FirebaseDatabase db;
     private DatabaseReference ref;
     private List<uploadLevel> lUpload=new ArrayList<>();
+    private List<String> idList = new ArrayList<>();
   ValueEventListener valueEventListener;
     boolean levelExists = false;
     @Override
@@ -40,8 +43,9 @@ private ProgressBar progressBar1;
         lrc.setHasFixedSize(true);
         lrc.setLayoutManager(new LinearLayoutManager(this));
         lrc.setItemAnimator(new DefaultItemAnimator());
-adapter=new levelAdapter(viewLevels.this,lUpload);
+adapter=new levelAdapter(viewLevels.this,lUpload,idList);
 lrc.setAdapter(adapter);
+
         db = FirebaseDatabase.getInstance();
         ref = db.getReference("level");
 valueEventListener=ref.addValueEventListener(new ValueEventListener() {
@@ -51,9 +55,9 @@ valueEventListener=ref.addValueEventListener(new ValueEventListener() {
                 for (DataSnapshot dss : dataSnapshot.getChildren()) {
                     uploadLevel upLevel= dss.getValue(uploadLevel.class);
                     upLevel.setlKey(dss.getKey());
+                    idList.add(dss.getKey());
                     lUpload.add(upLevel);
-//                    adapter = new levelAdapter(viewLevels.this, levelList, idList);
-//                    lrc.setAdapter(adapter);
+
                 }
                 adapter.notifyDataSetChanged();
                 progressBar1.setVisibility(View.GONE);
@@ -73,6 +77,5 @@ protected void onDestroy()
     super.onDestroy();
     ref.removeEventListener(valueEventListener);
 }
-
 
 }
