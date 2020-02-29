@@ -26,7 +26,7 @@ public class basic_test extends AppCompatActivity {
     TextView quest;
     Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 1;
+    int total = 0;
     int wrong = 0;
     DatabaseReference reference;
 
@@ -39,21 +39,27 @@ public class basic_test extends AppCompatActivity {
         b2 = (Button) findViewById(R.id.optb);
         b3 = (Button) findViewById(R.id.optc);
         b4 = (Button) findViewById(R.id.optd);
-        b5 = (Button) findViewById(R.id.next);
+
         quest = (TextView) findViewById(R.id.quesTxt);
         updateQuestion();
     }
 
     private void updateQuestion() {
         total++;
-        if (total > 2) {
-// result
+        if (total > 3) {
+            Toast.makeText(getApplicationContext(), "Test Complete", Toast.LENGTH_SHORT).show();
+            Intent i=new Intent(getApplicationContext(),RESULT_activity.class);
+            i.putExtra("total",String.valueOf(total));
+            i.putExtra("correct",String.valueOf(correct));
+            i.putExtra("incorrect",String.valueOf(wrong));
+            startActivity(i);
         } else {
-            reference = FirebaseDatabase.getInstance().getReference("Question");
+            reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
                         String ques = ds.child("question").getValue().toString();
                         final String answer = ds.child("answer").getValue().toString();
                         final String op1 = ds.child("option1").getValue().toString();
@@ -66,7 +72,6 @@ public class basic_test extends AppCompatActivity {
                         b2.setText(op2);
                         b3.setText(op3);
                         b4.setText(op4);
-
 
                         b1.setOnClickListener(new View.OnClickListener() {
                             @Override

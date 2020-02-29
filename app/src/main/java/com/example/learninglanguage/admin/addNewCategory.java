@@ -17,8 +17,9 @@ public class addNewCategory extends AppCompatActivity {
     private DatabaseReference ref;
     TextView name;
     Button add;
+    public String category;
 
-
+   //public static void setCategoryName(String category) {this.category = category; }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
