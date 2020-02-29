@@ -46,9 +46,12 @@ public class basic_test extends AppCompatActivity {
 
     private void updateQuestion() {
         total++;
-        if (total > 7) {
-// result
-            Intent i=new Intent(getApplicationContext(),testResult.class);
+        if (total > 3) {
+            Toast.makeText(getApplicationContext(), "Test Complete", Toast.LENGTH_SHORT).show();
+            Intent i=new Intent(getApplicationContext(),RESULT_activity.class);
+            i.putExtra("total",String.valueOf(total));
+            i.putExtra("correct",String.valueOf(correct));
+            i.putExtra("incorrect",String.valueOf(wrong));
             startActivity(i);
         } else {
             reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
@@ -69,7 +72,6 @@ public class basic_test extends AppCompatActivity {
                         b2.setText(op2);
                         b3.setText(op3);
                         b4.setText(op4);
-
 
                         b1.setOnClickListener(new View.OnClickListener() {
                             @Override
