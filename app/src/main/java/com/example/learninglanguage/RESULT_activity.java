@@ -15,9 +15,9 @@ public class RESULT_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_activity);
 
-        t1=(TextView)findViewById(R.id.textView11);
-        t2=(TextView)findViewById(R.id.textView16);
-        t3=(TextView)findViewById(R.id.textView14);
+        t1=(TextView)findViewById(R.id.textView13);
+        t2=(TextView)findViewById(R.id.textView17);
+        t3=(TextView)findViewById(R.id.textView15);
 
 
         Intent i= getIntent();
