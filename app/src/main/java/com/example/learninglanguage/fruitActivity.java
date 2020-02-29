@@ -30,7 +30,7 @@ private ImageView img;
                 try {
                     final MediaPlayer mp = new MediaPlayer();
                     mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929170716.mp3?alt=media&token=cb8423d9-0746-4ef0-96ab-940c1838bb88"
-                    );
+);
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
