@@ -46,7 +46,7 @@ public class UpdateCategory extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 addNewCategory category1=new addNewCategory();
-                addNewCategory.setCategoryName(Cname.getText().toString());
+               // addNewCategory.setCategoryName(Cname.getText().toString());
 
 
                 updateCategory(id,category1);

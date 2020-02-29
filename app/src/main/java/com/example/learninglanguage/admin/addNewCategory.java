@@ -19,7 +19,7 @@ public class addNewCategory extends AppCompatActivity {
     Button add;
     public String category;
 
-    public static void setCategoryName(String category) {this.category = category; }
+   //public static void setCategoryName(String category) {this.category = category; }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
