@@ -50,8 +50,7 @@
         app:layout_constraintEnd_toStartOf="@+id/orange"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cimage"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/cimage" />
 
     <Button
         android:id="@+id/yellow"
@@ -84,8 +83,7 @@
         android:background="#ff8000"
         app:layout_constraintBottom_toTopOf="@+id/red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cimage"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/cimage" />
 
     <Button
         android:id="@+id/white"
