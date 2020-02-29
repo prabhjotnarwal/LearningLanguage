@@ -1,19 +1,21 @@
-package com.example.learninglanguage.admin;
+package com.example.learninglanguage;
+
 import com.google.firebase.database.Exclude;
 
-public class uploadCategory {
-
-    public uploadCategory() { }
+public class categorySpinnerAdapter {
 
     private String categoryName;
-@Exclude
+
+    public categorySpinnerAdapter() { }
+
+    @Exclude
     public void setcKey(String cKey) { this.cKey = cKey; }
 
     private String cKey;
-@Exclude
+    @Exclude
     public String getcKey() { return cKey;   }
 
-    public uploadCategory(String categoryName) {
+    public categorySpinnerAdapter(String categoryName) {
         this.categoryName = categoryName;
     }
 
@@ -24,6 +26,8 @@ public class uploadCategory {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
+
+
 
 
 }

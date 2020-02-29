@@ -8,22 +8,23 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class categoryAdapter extends BaseAdapter {
-
+public class AdminDashboardAdapter extends BaseAdapter {
 
     Context context;
-    String categoryList[];
+    String dashboardList[];
     int pics[];
     LayoutInflater inflter;
-    public categoryAdapter(Context context, String[] categoryList, int[] pics) {
+
+    public AdminDashboardAdapter(Context context, String[] dashboardList,int[] pics) {
         this.context = context;
-        this.categoryList = categoryList;
+        this.dashboardList = dashboardList;
         this.pics = pics;
         inflter = (LayoutInflater.from(context));
+
     }
     @Override
     public int getCount() {
-        return categoryList.length;
+        return dashboardList.length;
     }
 
     @Override
@@ -38,12 +39,13 @@ public class categoryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = inflter.inflate(R.layout.category_layout, null);
-        TextView country = (TextView)
-                view.findViewById(R.id.text);
+        view = inflter.inflate(R.layout.dashboard_layout, null);
+        TextView options = (TextView) view.findViewById(R.id.options);
         ImageView icon = (ImageView) view.findViewById(R.id.icon);
-        country.setText(categoryList[i]);
+        options.setText(dashboardList[i]);
         icon.setImageResource(pics[i]);
         return view;
     }
+
 }
+
