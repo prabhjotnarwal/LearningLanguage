@@ -14,25 +14,27 @@
 
         </activity>
         <activity android:name=".Question">
-            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".admin.categoryListActivity">
 
         </activity>
         <activity android:name=".adminSongUpload" >
         </activity>
-        <activity android:name=".basic_test" />
+        <activity android:name=".basic_test" >
+
+        </activity>
         <activity android:name=".intermediate_test" />
         <activity android:name=".adminDashboard" />
         <activity android:name=".alphaLesson2" >
 
         </activity>
         <activity android:name=".admin_level" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".alphaLesson1" >
 
