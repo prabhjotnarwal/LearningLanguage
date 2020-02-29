@@ -47,6 +47,7 @@ public class addNewCategory extends AppCompatActivity {
                 uploadCategory uploadCategory1 = new uploadCategory(name1);
                 ref.push().setValue(uploadCategory1);
                 Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_LONG).show();
+
                 name.setText(" ");
                 return;
 
