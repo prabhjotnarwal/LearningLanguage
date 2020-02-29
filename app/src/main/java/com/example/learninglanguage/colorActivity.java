@@ -26,7 +26,6 @@ public class colorActivity extends AppCompatActivity {
         b = findViewById(R.id.blue);
         wh = findViewById(R.id.white);
 
-
         r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +80,7 @@ public class colorActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("\"https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855365282.mp3?alt=media&token=a46f14aa-ce36-472f-81e4-6ddece66fd42");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855365282.mp3?alt=media&token=a46f14aa-ce36-472f-81e4-6ddece66fd42");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
