@@ -30,7 +30,7 @@ public class addNewCategory extends AppCompatActivity {
         ref = database.getReference("category");
 
         add = findViewById(R.id.add);
-        name=findViewById(R.id.name);
+        name=findViewById(R.id.CNAme);
 
 
 
