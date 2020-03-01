@@ -26,7 +26,6 @@ public class colorActivity extends AppCompatActivity {
         b = findViewById(R.id.blue);
         wh = findViewById(R.id.white);
 
-
         r.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
