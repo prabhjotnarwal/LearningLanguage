@@ -44,11 +44,10 @@ public class intermediate_test extends AppCompatActivity {
 
     private void updateQuestion() {
         total++;
-        if (total > 7) {
-// result
-            Intent i=new Intent(getApplicationContext(),testResult.class);
-            startActivity(i);
-        } else {
+        if (total > 4) {
+
+        }
+        else {
             reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
             reference.addValueEventListener(new ValueEventListener() {
                 @Override
@@ -272,21 +271,47 @@ public class intermediate_test extends AppCompatActivity {
 
                     }
                 }
+
                 @Override
-                public void onCancelled (@NonNull DatabaseError databaseError){
+                public void onCancelled(@NonNull DatabaseError databaseError) {
 
                 }
 
             });
 
+        }
+        }
 
+        public void reverseTimer ( int seconds, final TextView tv)
+        {
+            new CountDownTimer(seconds * 1000 + 1000, 1000) {
+                @Override
+                public void onTick(long millisUntilFinished) {
+                    int seconds = (int) (millisUntilFinished / 1000);
+                    int minutes = seconds / 60;
+                    seconds = seconds % 60;
+                    tv.setText(String.format("%02d", minutes)
+                            + ":" + String.format("%02d", seconds));
+
+                }
+
+                @Override
+                public void onFinish() {
+                    tv.setText("completed");
+                    Intent myIntent = new Intent(intermediate_test.this, RESULT_activity.class);
+                    myIntent.putExtra("total", String.valueOf(total));
+                    myIntent.putExtra("correct", String.valueOf(correct));
+                    myIntent.putExtra("incorrect", String.valueOf(wrong));
+                    startActivity(myIntent);
+
+                }
+            }.start();
         }
     }
-    public void reverseTimer(int seconds,TextView tv)
-    {
-                        
-    }
-}
+
+
+
+
 
 
 
