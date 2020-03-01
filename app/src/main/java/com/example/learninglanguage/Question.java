@@ -44,7 +44,7 @@ public class Question extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
-                   ques = ds.getKey().toString();
+                   ques = ds.getKey();
 
                 }
             }
@@ -55,13 +55,14 @@ public class Question extends AppCompatActivity {
             }
         });
 
+
         btn1 = findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               int ques1 = Integer.valueOf(ques);
+                int ques1 = Integer.valueOf(ques);
                 int key = ques1 + 1;
-                String key1 = String.valueOf(key);
+                String key1 = Integer.toString(key);
                 String str1 = txt1.getText().toString();
                 String str2 = txt2.getText().toString();
                 String str3 = txt3.getText().toString();
@@ -71,7 +72,6 @@ public class Question extends AppCompatActivity {
                 upload_question que = new upload_question(str1, str2, str3, str4, str5, str6);
 
                 ref.child(key1).push().setValue(que);
-
 
                 Toast.makeText(getApplicationContext(), "Question Added", Toast.LENGTH_LONG).show();
 
