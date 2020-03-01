@@ -30,7 +30,7 @@
     android:layout_marginTop="25dp"
     android:orientation="horizontal">
     <Button
-        android:id="@+id/opta"
+        android:id="@+id/opta1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -45,7 +45,7 @@
         android:background="@drawable/testimg"
         />
     <Button
-        android:id="@+id/optb"
+        android:id="@+id/optb2"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -66,7 +66,7 @@
         android:layout_marginTop="25dp"
         android:orientation="horizontal">
     <Button
-        android:id="@+id/optc"
+        android:id="@+id/optc3"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -82,7 +82,7 @@
          />
 
     <Button
-        android:id="@+id/optd"
+        android:id="@+id/optd1"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
