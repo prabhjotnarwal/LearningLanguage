@@ -18,7 +18,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.gson.Gson;
 
 public class basic_test extends AppCompatActivity {
 
@@ -35,10 +34,10 @@ public class basic_test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_test);
-        b1 = (Button) findViewById(R.id.opta);
-        b2 = (Button) findViewById(R.id.optb);
-        b3 = (Button) findViewById(R.id.optc);
-        b4 = (Button) findViewById(R.id.optd);
+        b1 = (Button) findViewById(R.id.opta1);
+        b2 = (Button) findViewById(R.id.optb2);
+        b3 = (Button) findViewById(R.id.optc3);
+        b4 = (Button) findViewById(R.id.optd1);
 
         quest = (TextView) findViewById(R.id.quesTxt);
         updateQuestion();
