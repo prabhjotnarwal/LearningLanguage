@@ -5,7 +5,7 @@
     >
 
     <RelativeLayout
-        android:id="@+id/layout3"
+        android:id="@+id/layout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -17,19 +17,17 @@
 
 
         <TextView
-            android:id="@+id/catName"
+            android:id="@+id/catName1"
             android:layout_width="299dp"
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
-
             android:layout_alignParentEnd="true"
             android:layout_marginStart="33dp"
             android:layout_marginEnd="33dp"
             android:gravity="center"
-            android:textColor="?attr/colorPrimary"
             android:textSize="30sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
-
 </ScrollView>
+

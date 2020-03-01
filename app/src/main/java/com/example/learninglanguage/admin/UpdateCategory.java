@@ -23,35 +23,28 @@ public class UpdateCategory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.update_category);
-        del = findViewById(R.id.delete);
-        upd = findViewById(R.id.update);
-
-        Cname = findViewById(R.id.name);
-
+        del = findViewById(R.id.cdelete);
+        upd = findViewById(R.id.cupdate);
+        Cname = findViewById(R.id.CNAme);
 
         db = FirebaseDatabase.getInstance();
         ref = db.getReference("category");
+
         String jsonString = getIntent().getStringExtra("category");
         final String id = getIntent().getStringExtra("key");
         Gson gson = new Gson();
-        final addNewCategory category = gson.fromJson(jsonString, addNewCategory.class);
+        uploadCategory category = gson.fromJson(jsonString, uploadCategory.class);
 
-        final String categoryName = getIntent().getStringExtra("name");
+        final String  categoryName = getIntent().getStringExtra("categoryName");
 
-       Cname.setText(categoryName);
-
-
-
+       Cname.setText( categoryName);
         upd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addNewCategory category1=new addNewCategory();
-               // addNewCategory.setCategoryName(Cname.getText().toString());
-
-
+                uploadCategory category1=new uploadCategory();
+                category1.setCategoryName(Cname.getText().toString());
                 updateCategory(id,category1);
                 Toast.makeText(getApplicationContext(), "Updated Successfully", Toast.LENGTH_LONG).show();
-
                 return;
             }
         });
@@ -68,8 +61,8 @@ public class UpdateCategory extends AppCompatActivity {
         });
 
     }
-    public void updateCategory(String id,addNewCategory addNewCategory){
-        ref.child(id).setValue(addNewCategory).addOnSuccessListener(new OnSuccessListener<Void>() {
+    public void updateCategory(String id,uploadCategory uploadCategory){
+        ref.child(id).setValue(uploadCategory).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
 

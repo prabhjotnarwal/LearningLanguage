@@ -36,7 +36,7 @@ public class adminDashboard extends AppCompatActivity {
 
                         if (position == 0)
                         {
-                            Intent intent = new Intent(adminDashboard.this, addNewCategory.class);
+                            Intent intent = new Intent(adminDashboard.this, Admin_Category_List.class);
                             intent.putExtra("position",position);
                             startActivity(intent);
                         }
