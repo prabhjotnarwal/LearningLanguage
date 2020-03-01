@@ -22,13 +22,13 @@ public class RESULT_activity extends AppCompatActivity {
 
         Intent i= getIntent();
 
-        String  questions= i.getStringExtra("total");
+        //String  questions= i.getStringExtra("total");
         String  correct= i.getStringExtra("correct");
         String  wrong= i.getStringExtra("incorrect");
 
 
 
-        t1.setText(questions);
+        t1.setText("7");
         t2.setText(correct);
         t3.setText(wrong);
 
