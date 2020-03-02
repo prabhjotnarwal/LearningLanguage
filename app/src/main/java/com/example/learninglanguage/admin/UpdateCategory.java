@@ -41,9 +41,9 @@ public class UpdateCategory extends AppCompatActivity {
         upd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                uploadCategory category1=new uploadCategory();
-                category1.setCategoryName(Cname.getText().toString());
-                updateCategory(id,category1);
+                uploadCategory category=new uploadCategory();
+                category.setCategoryName(Cname.getText().toString());
+                updateCategory(id,category);
                 Toast.makeText(getApplicationContext(), "Updated Successfully", Toast.LENGTH_LONG).show();
                 return;
             }
@@ -61,8 +61,8 @@ public class UpdateCategory extends AppCompatActivity {
         });
 
     }
-    public void updateCategory(String id,uploadCategory uploadCategory){
-        ref.child(id).setValue(uploadCategory).addOnSuccessListener(new OnSuccessListener<Void>() {
+    public void updateCategory(String id,uploadCategory category){
+        ref.child(id).setValue(category).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
 

@@ -300,7 +300,7 @@ public class intermediate_test extends AppCompatActivity {
                 public void onFinish() {
                     tv.setText("completed");
                     Intent myIntent = new Intent(intermediate_test.this, RESULT_activity.class);
-                    myIntent.putExtra("total", String.valueOf(total));
+                    //myIntent.putExtra("total", String.valueOf(total));
                     myIntent.putExtra("correct", String.valueOf(correct));
                     myIntent.putExtra("incorrect", String.valueOf(wrong));
                     startActivity(myIntent);
