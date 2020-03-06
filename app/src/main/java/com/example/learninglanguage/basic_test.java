@@ -45,7 +45,7 @@ public class basic_test extends AppCompatActivity {
 
     private void updateQuestion() {
         total++;
-        if (total > 3) {
+        if (total > 5) {
             Toast.makeText(getApplicationContext(), "Test Complete", Toast.LENGTH_SHORT).show();
             Intent i=new Intent(getApplicationContext(),RESULT_activity.class);
             i.putExtra("total",String.valueOf(total));
