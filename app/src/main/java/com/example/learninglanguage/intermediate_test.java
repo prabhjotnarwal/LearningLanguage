@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class intermediate_test extends AppCompatActivity {
     TextView quest,timer;
-    Button b1, b2, b3, b4, b5;
+    Button b1, b2, b3, b4;
     int correct = 0;
     int total = 6;
     int wrong = 0;
