@@ -17,8 +17,9 @@ public class addNewCategory extends AppCompatActivity {
     private DatabaseReference ref;
     TextView name;
     Button add;
+    public String category;
 
-
+   //public static void setCategoryName(String category) {this.category = category; }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +30,7 @@ public class addNewCategory extends AppCompatActivity {
         ref = database.getReference("category");
 
         add = findViewById(R.id.add);
-        name=findViewById(R.id.name);
+        name=findViewById(R.id.CNAme);
 
 
 
@@ -46,6 +47,7 @@ public class addNewCategory extends AppCompatActivity {
                 uploadCategory uploadCategory1 = new uploadCategory(name1);
                 ref.push().setValue(uploadCategory1);
                 Toast.makeText(getApplicationContext(), "Added Successfully", Toast.LENGTH_LONG).show();
+
                 name.setText(" ");
                 return;
 
