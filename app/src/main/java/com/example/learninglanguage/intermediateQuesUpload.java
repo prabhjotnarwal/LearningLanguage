@@ -38,6 +38,7 @@ private Uri mQueUri;
 private StorageReference mStorageRef;
 private DatabaseReference mDatabaseRef;
 private StorageTask mUploadTask;
+    public String ques;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -108,7 +109,7 @@ private StorageTask mUploadTask;
                         public void run() {
                             mProgressBar.setProgress(0);
                         }
-                    }, 400);
+                    }, 600);
                     Toast.makeText(intermediateQuesUpload.this, "Uploaded successfully", Toast.LENGTH_LONG).show();
                     // uploadImageQue uploadImageQue=new uploadImageQue(taskSnapshot.getStorage().getDownloadUrl().toString());
                     fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -123,8 +124,6 @@ private StorageTask mUploadTask;
                             String uploadId = mDatabaseRef.push().getKey();
                             mDatabaseRef.child(uploadId).setValue(uploadImageQue1);
                             Toast.makeText(getApplicationContext(), "Uploaded Successfully", Toast.LENGTH_LONG).show();
-//                    String uploadId=mDatabaseRef.push().getKey();
-//                    mDatabaseRef.child(uploadId).setValue(uploadImageQue);
                         }
                     });
                 }
