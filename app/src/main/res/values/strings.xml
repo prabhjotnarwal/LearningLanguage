@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LearningLanguage</string>
+    <string name="title_activity_upload_ques_color">uploadQuesColor</string>
 </resources>

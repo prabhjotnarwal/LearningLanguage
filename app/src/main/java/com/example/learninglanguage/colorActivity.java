@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class colorActivity extends AppCompatActivity {
     private Button r, b, g,y,bl, orn, wh,vo;
     private ImageView ima;
+    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class colorActivity extends AppCompatActivity {
         orn = findViewById(R.id.orange);
         b = findViewById(R.id.blue);
         wh = findViewById(R.id.white);
+        btn=findViewById(R.id.test);
 
         r.setOnClickListener(new View.OnClickListener() {
             @Override

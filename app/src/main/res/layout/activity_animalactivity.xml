@@ -106,4 +106,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/tst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready for Test"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/panda"
+        app:layout_constraintVertical_bias="0.456" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

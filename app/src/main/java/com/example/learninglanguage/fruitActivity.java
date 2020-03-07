@@ -11,6 +11,7 @@ import android.widget.ImageView;
 public class fruitActivity extends AppCompatActivity {
 private Button banana,orange,apple,kiwi,stberry,mango,grapes,wtmelon;
 private ImageView img;
+private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,8 @@ private ImageView img;
         mango = findViewById(R.id.man);
         grapes = findViewById(R.id.gr);
         wtmelon = findViewById(R.id.wm);
+        btn  = findViewById(R.id.test);
+
         banana.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

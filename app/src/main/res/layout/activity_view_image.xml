@@ -4,32 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    tools:context=".intermediate_test">
+    tools:context=".intermediateTestImg">
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Choose one the Four options"
-            android:textColor="#800000"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/qtext"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:padding="10dp"
-            android:gravity="center"
-            android:text="Questions"
-            android:textColor="#800000"
-            android:textStyle="bold"
-            android:textSize="40sp"
-            />
+        <ImageView
+            android:id="@+id/imgQue"
+            android:layout_width="237dp"
+            android:layout_height="213dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.316"
+            tools:srcCompat="@tools:sample/avatars" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,7 +34,7 @@
             android:layout_marginTop="25dp"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/opta1"
+                android:id="@+id/opti1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -54,7 +49,7 @@
                 android:background="@drawable/fly"
                 />
             <Button
-                android:id="@+id/optb2"
+                android:id="@+id/opti2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -75,7 +70,7 @@
             android:layout_marginTop="25dp"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/optc3"
+                android:id="@+id/opti3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -91,7 +86,7 @@
                 />
 
             <Button
-                android:id="@+id/optd1"
+                android:id="@+id/opti4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

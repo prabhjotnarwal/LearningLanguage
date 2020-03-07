@@ -18,6 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.learninglanguage.R;
+import com.example.learninglanguage.levelColor;
+import com.example.learninglanguage.levelFruit;
+import com.example.learninglanguage.nothingToDisplay;
 import com.example.learninglanguage.viewLevels;
 import com.google.gson.Gson;
 
@@ -58,13 +61,19 @@ public class categoryListAdapter extends RecyclerView.Adapter<categoryListAdapte
             public void onClick(View view) {
                 Gson gson = new Gson();
                 String jsonString = gson.toJson(category);
-
-                Intent intent = new Intent(context, viewLevels.class);
-//                intent.putExtra("learning", jsonString);
-//                intent.putExtra("key", id);
-//                intent.putExtra("name",learning.getCategoryName());
-
-                context.startActivity(intent);
+                if(position==0){
+                     Intent intent = new Intent(context, viewLevels.class);
+                     context.startActivity(intent);}
+                else if(position==1){
+                    Intent intent = new Intent(context, levelColor.class);
+                    //intent.putExtra("position",position);
+                    context.startActivity(intent);}
+               else if(position==2){
+                    Intent intent = new Intent(context, levelFruit.class);
+                    context.startActivity(intent);}
+               else{
+                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    context.startActivity(intent);}
             }
         });
     }
@@ -76,13 +85,10 @@ public class categoryListAdapter extends RecyclerView.Adapter<categoryListAdapte
 
        public class categoryViewHolder extends RecyclerView.ViewHolder {
            TextView categoryName;
-
-           final ImageView catImage;
            public categoryViewHolder(@NonNull View itemView) {
                super(itemView);
                context = itemView.getContext();
                categoryName = itemView.findViewById(R.id.catName);
-               catImage=itemView.findViewById(R.id.catImage);
                layout = itemView.findViewById(R.id.layout3);
                TextPaint paint = categoryName.getPaint();
                float width = paint.measureText("Alphabet, Color");

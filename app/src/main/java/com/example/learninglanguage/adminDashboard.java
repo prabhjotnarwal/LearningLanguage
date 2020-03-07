@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.example.learninglanguage.admin.addNewCategory;
-
 public class adminDashboard extends AppCompatActivity {
 
     ListView lv;
@@ -19,7 +17,7 @@ public class adminDashboard extends AppCompatActivity {
         setContentView(R.layout.activity_admin_dashboard);
 
         lv = findViewById(R.id.lv1);
-        String[] mobileArray = {"Manage Category","Manage Level", "Add Videos", "Add Audios", "Manage Tests"};
+        String[] mobileArray = {"Manage Category","Manage Level", "Add Videos", "Add Audios", "Add Questions"};
         int flags[] = {R.drawable.admin_manage_category, R.drawable.admin_manage_levels, R.drawable.admin_add_video, R.drawable.admin_add_audio,R.drawable.admin_manage_tests};
 
 
@@ -36,7 +34,7 @@ public class adminDashboard extends AppCompatActivity {
 
                         if (position == 0)
                         {
-                            Intent intent = new Intent(adminDashboard.this, addNewCategory.class);
+                            Intent intent = new Intent(adminDashboard.this, Admin_Category_List.class);
                             intent.putExtra("position",position);
                             startActivity(intent);
                         }
@@ -60,7 +58,7 @@ public class adminDashboard extends AppCompatActivity {
                         }
                         if (position == 4)
                         {
-                            Intent intent = new Intent(adminDashboard.this, Question.class);
+                            Intent intent = new Intent(adminDashboard.this, optToAddQuest.class);
                             intent.putExtra("position",position);
                             startActivity(intent);
                         }

@@ -47,17 +47,18 @@ public class RegistrationActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
-                if (!password.equals(cpass)) {
+                else if (!password.equals(cpass)) {
                     Toast.makeText(getApplicationContext(), "Both password fields must be identical ", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                     return;
                 }
-                if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)||TextUtils.isEmpty(cpass)) {
+                else if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)||TextUtils.isEmpty(cpass)) {
                     Toast.makeText(getApplicationContext(), "Please fill the details", Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                     return;
-                } else{
-                    mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                }
+                   //else{
+                       mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
@@ -73,18 +74,18 @@ public class RegistrationActivity extends AppCompatActivity {
                         }
                     });
 
-                }
-            }
-        });
+               // }
+
+        }
+    });
+
     }
-
-
 
     private void initializeUI() {
         emailTV = findViewById(R.id.email);
         passwordTV = findViewById(R.id.password);
         cpassTV=findViewById(R.id.cpass);
         regBtn = findViewById(R.id.register);
-        progressBar = findViewById(R.id.progressBar);
+        progressBar = findViewById(R.id.progressBar4);
     }
 }
