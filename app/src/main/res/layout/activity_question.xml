@@ -5,8 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Question">
-
+    tools:context=".Question"
+    android:background="@drawable/bg"
+    >
 
     <TextView
         android:id="@+id/textView3"
@@ -23,28 +24,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="" />
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <EditText
         android:id="@+id/textView5"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:layout_marginLeft="25dp"/>
+
     <EditText
         android:id="@+id/textView6"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:layout_marginLeft="25dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <EditText
         android:id="@+id/textView7"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="" />
+        android:text=""
+        android:layout_marginLeft="25dp"/>
     <EditText
         android:id="@+id/textView8"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="" />
-<Button
+        android:text=""
+        android:layout_marginLeft="25dp"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/textView9"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="200dp"/>
+    <Button
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/btn1"
