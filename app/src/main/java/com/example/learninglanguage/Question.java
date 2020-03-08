@@ -1,19 +1,18 @@
 package com.example.learninglanguage;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.learninglanguage.admin.upload_question;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class Question extends AppCompatActivity {
+public class  Question extends AppCompatActivity {
     EditText txt1,txt2,txt3,txt4,txt5,txt6;
     Button btn1;
     private FirebaseDatabase db;
