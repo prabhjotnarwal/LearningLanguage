@@ -52,7 +52,7 @@ public class Admin_category_Adapter  extends RecyclerView.Adapter<Admin_category
         final String id = idList.get(position);
         holder.categoryName.setText(category.getCategoryName());
 
-        holder.categoryName.setOnClickListener(new View.OnClickListener() {
+        holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Gson gson = new Gson();

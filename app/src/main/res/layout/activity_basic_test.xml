@@ -11,7 +11,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <TextView
-        android:id="@+id/quesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#D43CD8"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:text="Choose one from the options"/>
+    <TextView
+        android:id="@+id/qtext"
         android:layout_width="match_parent"
         android:layout_height="140dp"
         android:padding="10dp"

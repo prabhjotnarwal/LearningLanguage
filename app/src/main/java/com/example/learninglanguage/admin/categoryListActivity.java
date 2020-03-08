@@ -2,6 +2,7 @@ package com.example.learninglanguage.admin;
 
 import android.os.Bundle;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,6 +36,12 @@ public class categoryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_list);
         recyclerView = findViewById(R.id.crecyclerview);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -66,11 +73,6 @@ public class categoryListActivity extends AppCompatActivity {
             }
 
         });
-    }
-    public void onBackPress()
-    {
-        finish();
-        super.onBackPressed();
     }
     protected void onDestroy()
     {
