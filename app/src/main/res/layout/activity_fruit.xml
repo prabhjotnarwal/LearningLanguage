@@ -37,12 +37,14 @@
         android:id="@+id/org"
         android:layout_width="141dp"
         android:layout_height="77dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
         android:background="@drawable/orange"
         app:layout_constraintBottom_toTopOf="@+id/ki"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ba"
         app:layout_constraintTop_toBottomOf="@+id/fimage" />
 
     <Button
@@ -120,13 +122,25 @@
         android:id="@+id/wm"
         android:layout_width="141dp"
         android:layout_height="77dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="90dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/watermelon"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/test"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/man" />
+
+    <Button
+        android:id="@+id/test"
+        android:layout_width="144dp"
+        android:layout_height="56dp"
+        android:text="Ready for Test"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.829"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

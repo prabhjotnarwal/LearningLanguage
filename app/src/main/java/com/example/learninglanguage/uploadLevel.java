@@ -4,7 +4,7 @@ import com.google.firebase.database.Exclude;
 
 public class uploadLevel {
 
-public uploadLevel(){}
+public uploadLevel(String id, String str1){}
     private String levelName;
 @Exclude
     public void setlKey(String lKey) {

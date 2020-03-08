@@ -21,10 +21,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class intermediate_test extends AppCompatActivity {
-    TextView quest,timer;
-    Button b1, b2, b3, b4;
+    TextView quest;
+    Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 6;
+    int total = 0;
     int wrong = 0;
     DatabaseReference reference;
 
@@ -32,21 +32,20 @@ public class intermediate_test extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intemediate_test);
+        setContentView(R.layout.activity_basic_test);
         b1 = (Button) findViewById(R.id.opta1);
         b2 = (Button) findViewById(R.id.optb2);
         b3 = (Button) findViewById(R.id.optc3);
         b4 = (Button) findViewById(R.id.optd1);
-        timer = (TextView) findViewById(R.id.timertxt);
-        quest = (TextView) findViewById(R.id.quesTxt);
+
+       // quest = (TextView) findViewById(R.id.quesTxt);
         updateQuestion();
-        reverseTimer(200,timer);
     }
 
     private void updateQuestion() {
         total++;
-        if (total == 14) {
-            reverseTimer(0,timer);
+        if (total > 4) {
+
         }
         else {
             reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
@@ -80,7 +79,7 @@ public class intermediate_test extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             correct = correct + 1;
-                                            b1.setBackgroundResource(R.drawable.fly);
+                                            b1.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
 
                                         }
@@ -105,10 +104,10 @@ public class intermediate_test extends AppCompatActivity {
                                     handler.postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
-                                            b1.setBackgroundResource(R.drawable.fly);
-                                            b2.setBackgroundResource(R.drawable.fly);
-                                            b3.setBackgroundResource(R.drawable.fly);
-                                            b4.setBackgroundResource(R.drawable.fly);
+                                            b1.setBackgroundResource(R.drawable.testimg);
+                                            b2.setBackgroundResource(R.drawable.btnimg1);
+                                            b3.setBackgroundResource(R.drawable.btnimg1);
+                                            b4.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
 
                                         }
@@ -131,7 +130,7 @@ public class intermediate_test extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             correct = correct + 1;
-                                            b2.setBackgroundResource(R.drawable.fly);
+                                            b2.setBackgroundResource(R.drawable.btnimg1);
                                             updateQuestion();
 
                                         }
@@ -156,10 +155,10 @@ public class intermediate_test extends AppCompatActivity {
                                     handler.postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
-                                            b1.setBackgroundResource(R.drawable.fly);
-                                            b2.setBackgroundResource(R.drawable.fly);
-                                            b3.setBackgroundResource(R.drawable.fly);
-                                            b4.setBackgroundResource(R.drawable.fly);
+                                            b1.setBackgroundResource(R.drawable.testimg);
+                                            b2.setBackgroundResource(R.drawable.btnimg1);
+                                            b3.setBackgroundResource(R.drawable.btnimg1);
+                                            b4.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
 
                                         }
@@ -181,7 +180,7 @@ public class intermediate_test extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             correct = correct + 1;
-                                            b3.setBackgroundResource(R.drawable.fly);
+                                            b3.setBackgroundResource(R.drawable.btnimg1);
                                             updateQuestion();
 
                                         }
@@ -206,10 +205,10 @@ public class intermediate_test extends AppCompatActivity {
                                     handler.postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
-                                            b1.setBackgroundResource(R.drawable.fly);
-                                            b2.setBackgroundResource(R.drawable.fly);
-                                            b3.setBackgroundResource(R.drawable.fly);
-                                            b4.setBackgroundResource(R.drawable.fly);
+                                            b1.setBackgroundResource(R.drawable.testimg);
+                                            b2.setBackgroundResource(R.drawable.btnimg1);
+                                            b3.setBackgroundResource(R.drawable.btnimg1);
+                                            b4.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
 
                                         }
@@ -231,7 +230,7 @@ public class intermediate_test extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             correct = correct + 1;
-                                            b4.setBackgroundResource(R.drawable.fly);
+                                            b4.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
                                         }
 
@@ -255,10 +254,10 @@ public class intermediate_test extends AppCompatActivity {
                                     handler.postDelayed(new Runnable() {
                                         @Override
                                         public void run() {
-                                            b1.setBackgroundResource(R.drawable.fly);
-                                            b2.setBackgroundResource(R.drawable.fly);
-                                            b3.setBackgroundResource(R.drawable.fly);
-                                            b4.setBackgroundResource(R.drawable.fly);
+                                            b1.setBackgroundResource(R.drawable.testimg);
+                                            b2.setBackgroundResource(R.drawable.btnimg1);
+                                            b3.setBackgroundResource(R.drawable.btnimg1);
+                                            b4.setBackgroundResource(R.drawable.testimg);
                                             updateQuestion();
 
                                         }
@@ -300,7 +299,7 @@ public class intermediate_test extends AppCompatActivity {
                 public void onFinish() {
                     tv.setText("completed");
                     Intent myIntent = new Intent(intermediate_test.this, RESULT_activity.class);
-                    //myIntent.putExtra("total", String.valueOf(total));
+                    myIntent.putExtra("total", String.valueOf(total));
                     myIntent.putExtra("correct", String.valueOf(correct));
                     myIntent.putExtra("incorrect", String.valueOf(wrong));
                     startActivity(myIntent);

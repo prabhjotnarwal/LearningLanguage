@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".colorActivity"
+    android:background="@drawable/bg">
+
+
+
+    <ImageView
+        android:id="@+id/A"
+        android:layout_width="269dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/animal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/ele"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/elep"
+        app:layout_constraintBottom_toTopOf="@+id/horse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A" />
+
+
+    <Button
+        android:id="@+id/lion"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/loin"
+        app:layout_constraintBottom_toTopOf="@+id/bear"
+        app:layout_constraintEnd_toStartOf="@+id/ele"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/A"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <Button
+        android:id="@+id/bear"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/be"
+        app:layout_constraintBottom_toTopOf="@+id/dog"
+        app:layout_constraintEnd_toStartOf="@+id/horse"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/dog"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/dog"
+        app:layout_constraintBottom_toTopOf="@+id/deer"
+        app:layout_constraintEnd_toStartOf="@+id/tiger"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/deer"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/deer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/panda"
+        app:layout_constraintHorizontal_bias="0.265"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/horse"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/ho"
+        app:layout_constraintBottom_toTopOf="@+id/tiger"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/tiger"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/ti"
+        app:layout_constraintBottom_toTopOf="@+id/panda"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/panda"
+        android:layout_width="141dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/pa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/tst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready for Test"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/panda"
+        app:layout_constraintVertical_bias="0.456" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -39,7 +39,7 @@ public class basic_test extends AppCompatActivity {
         b3 = (Button) findViewById(R.id.optc3);
         b4 = (Button) findViewById(R.id.optd1);
 
-        quest = (TextView) findViewById(R.id.quesTxt);
+        quest = (TextView) findViewById(R.id.qtext);
         updateQuestion();
     }
 
