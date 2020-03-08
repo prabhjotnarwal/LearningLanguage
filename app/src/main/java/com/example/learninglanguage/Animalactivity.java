@@ -8,31 +8,31 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class fruitActivity extends AppCompatActivity {
-private Button banana,orange,apple,kiwi,stberry,mango,grapes,wtmelon;
-private ImageView img;
-private Button btn;
+public class Animalactivity extends AppCompatActivity {
+    private Button e,li,be,de,ti,ho,pan,d;
+    private ImageView animal;
+    private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fruit);
-        img = findViewById(R.id.cimage);
-        banana = findViewById(R.id.ba);
-        orange = findViewById(R.id.org);
-        apple = findViewById(R.id.ap);
-        kiwi = findViewById(R.id.ki);
-        stberry = findViewById(R.id.st);
-        mango = findViewById(R.id.man);
-        grapes = findViewById(R.id.gr);
-        wtmelon = findViewById(R.id.wm);
+        setContentView(R.layout.activity_animalactivity);
+        animal = findViewById(R.id.A);
+        e = findViewById(R.id.ele);
+        li = findViewById(R.id.lion);
+        be = findViewById(R.id.bear);
+        d = findViewById(R.id.dog);
+        de = findViewById(R.id.deer);
+        ho = findViewById(R.id.horse);
+        ti = findViewById(R.id.tiger);
+        pan = findViewById(R.id.panda);
         btn  = findViewById(R.id.test);
 
-        banana.setOnClickListener(new View.OnClickListener() {
+        e.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929170716.mp3?alt=media&token=cb8423d9-0746-4ef0-96ab-940c1838bb88");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855575932.mp3?alt=media&token=2c83e4e4-6932-4d6d-ac55-0c2cb47c02fa");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -51,7 +51,105 @@ private Button btn;
                 }
             }
         });
-        orange.setOnClickListener(new View.OnClickListener() {
+        li.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    final MediaPlayer mp = new MediaPlayer();
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855399717.mp3?alt=media&token=0cec0bd7-5ae6-40c0-903c-26f4dba58408"
+                    );
+                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            mp.start();
+                        }
+                    });
+                    mp.prepare();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mp.pause();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    final MediaPlayer mp = new MediaPlayer();
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855365282.mp3?alt=media&token=a46f14aa-ce36-472f-81e4-6ddece66fd42");
+                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            mp.start();
+                        }
+                    });
+                    mp.prepare();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mp.pause();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        be.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    final MediaPlayer mp = new MediaPlayer();
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855762683.mp3?alt=media&token=000dfda2-ddef-417f-95e0-bf1892820827");
+                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            mp.start();
+                        }
+                    });
+                    mp.prepare();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mp.pause();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        de.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    final MediaPlayer mp = new MediaPlayer();
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855343957.mp3?alt=media&token=1731193b-00c8-44f5-ab0c-3edef1854d09"
+                    );
+                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                        @Override
+                        public void onPrepared(MediaPlayer mediaPlayer) {
+                            mp.start();
+                        }
+                    });
+                    mp.prepare();
+                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mediaPlayer) {
+                            mp.pause();
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        ti.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
@@ -75,12 +173,13 @@ private Button btn;
                 }
             }
         });
-        apple.setOnClickListener(new View.OnClickListener() {
+        ho.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929146841.mp3?alt=media&token=a92062c6-6934-4619-9d4d-754bf7b5f516");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855656916.mp3?alt=media&token=de42d317-05e8-4f98-8ddf-d84130706deb"
+                    );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -99,12 +198,13 @@ private Button btn;
                 }
             }
         });
-        kiwi.setOnClickListener(new View.OnClickListener() {
+        pan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929196465.mp3?alt=media&token=bf2be08e-196a-4e02-babf-3465d0aec332");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855633656.mp3?alt=media&token=0c27163f-8fe1-41c1-a7db-064024394e6d"
+                    );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -123,101 +223,8 @@ private Button btn;
                 }
             }
         });
-        stberry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582931156765.mp3?alt=media&token=ca11eca0-b9e3-4971-8184-9cc8b7fb114d");
-                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mediaPlayer) {
-                            mp.start();
-                        }
-                    });
-                    mp.prepare();
-                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mp.pause();
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        mango.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929272827.mp3?alt=media&token=d78da0cf-8587-45ec-b7f9-9b198a52a52a");
-                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mediaPlayer) {
-                            mp.start();
-                        }
-                    });
-                    mp.prepare();
-                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mp.pause();
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        grapes.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582931115418.mp3?alt=media&token=100e83f1-4e76-4e8a-ad4c-21cf17a05756");
-                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mediaPlayer) {
-                            mp.start();
-                        }
-                    });
-                    mp.prepare();
-                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mp.pause();
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-        wtmelon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                try {
-                    final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582929309408.mp3?alt=media&token=dca5f7df-bd71-4830-82e9-eb692d88a242");
-                    mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                        @Override
-                        public void onPrepared(MediaPlayer mediaPlayer) {
-                            mp.start();
-                        }
-                    });
-                    mp.prepare();
-                    mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mediaPlayer) {
-                            mp.pause();
-                        }
-                    });
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+
     }
 }
+
+

@@ -69,15 +69,14 @@
             android:layout_marginLeft="25dp"
             android:hint="Option 4"
             android:text="" />
+
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/canswer"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="200dp"
-        android:hint="Correct Answer"
-        android:text="" />
+    <Spinner
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -85,4 +84,5 @@
         android:text="Add Question">
 
     </Button>
+
 </LinearLayout>
