@@ -28,6 +28,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         mAuth = FirebaseAuth.getInstance();
         fBtn=findViewById(R.id.fPassword);
         initializeUI();
@@ -55,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(LoginActivity.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "Failed to send email! Please check your email again!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
                                 }
 
                                 progressBar.setVisibility(View.GONE);
@@ -67,16 +68,21 @@ public class LoginActivity extends AppCompatActivity {
 
     private void loginUserAccount() {
         progressBar.setVisibility(View.VISIBLE);
+
         final String email, password;
         email = emailTV.getText().toString();
         password = passwordTV.getText().toString();
 
-        if (TextUtils.isEmpty(email)||TextUtils.isEmpty(password)) {
-            Toast.makeText(getApplicationContext(), "Sorry!! Empty fields are not accepted", Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(getApplicationContext(), "Please enter email...", Toast.LENGTH_LONG).show();
             progressBar.setVisibility(View.GONE);
             return;
         }
-
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(getApplicationContext(), "Please enter password!", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
+            return;
+        }
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {

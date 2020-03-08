@@ -25,7 +25,7 @@ public class basic_test extends AppCompatActivity {
     TextView quest;
     Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 13;
+    int total = 0;
     int wrong = 0;
     DatabaseReference reference;
 
@@ -39,16 +39,16 @@ public class basic_test extends AppCompatActivity {
         b3 = (Button) findViewById(R.id.optc3);
         b4 = (Button) findViewById(R.id.optd1);
 
-        quest = (TextView) findViewById(R.id.qtext);
+        //quest = (TextView) findViewById(R.id.qtext);
         updateQuestion();
     }
 
     private void updateQuestion() {
         total++;
-        if (total == 21) {
+        if (total > 5) {
             Toast.makeText(getApplicationContext(), "Test Complete", Toast.LENGTH_SHORT).show();
             Intent i=new Intent(getApplicationContext(),RESULT_activity.class);
-            //i.putExtra("total",String.valueOf(total));
+            i.putExtra("total",String.valueOf(total));
             i.putExtra("correct",String.valueOf(correct));
             i.putExtra("incorrect",String.valueOf(wrong));
             startActivity(i);

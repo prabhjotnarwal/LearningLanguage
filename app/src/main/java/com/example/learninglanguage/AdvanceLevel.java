@@ -1,4 +1,6 @@
 package com.example.learninglanguage;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
@@ -40,7 +42,7 @@ public class AdvanceLevel extends AppCompatActivity {
 
         childreference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange( DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String message = dataSnapshot.getValue(String.class);
                 Uri uri = Uri.parse(message);
                 video.setVideoURI(uri);
@@ -54,7 +56,7 @@ public class AdvanceLevel extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
             }
         });

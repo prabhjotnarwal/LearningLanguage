@@ -74,11 +74,6 @@ public class categoryListActivity extends AppCompatActivity {
 
         });
     }
-    public void onBackPress()
-    {
-        finish();
-        super.onBackPressed();
-    }
     protected void onDestroy()
     {
         super.onDestroy();
