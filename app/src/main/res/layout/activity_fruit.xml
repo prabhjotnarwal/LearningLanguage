@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fruitActivity"
     android:background="@drawable/bg">
-
     <ImageView
         android:id="@+id/fimage"
         android:layout_width="273dp"
