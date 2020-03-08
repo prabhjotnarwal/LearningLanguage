@@ -111,7 +111,6 @@ private StorageTask mUploadTask;
                         }
                     }, 600);
                     Toast.makeText(intermediateQuesUpload.this, "Uploaded successfully", Toast.LENGTH_LONG).show();
-                    // uploadImageQue uploadImageQue=new uploadImageQue(taskSnapshot.getStorage().getDownloadUrl().toString());
                     fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
