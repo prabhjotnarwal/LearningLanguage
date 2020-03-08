@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.learninglanguage.R;
+import com.example.learninglanguage.levelAnimal;
 import com.example.learninglanguage.levelColor;
 import com.example.learninglanguage.levelFruit;
 import com.example.learninglanguage.nothingToDisplay;
@@ -70,6 +71,19 @@ public class categoryListAdapter extends RecyclerView.Adapter<categoryListAdapte
                     context.startActivity(intent);}
                else if(position==2){
                     Intent intent = new Intent(context, levelFruit.class);
+                    context.startActivity(intent);}
+                else if(position==3){
+                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    context.startActivity(intent);}
+                else if(position==4){
+                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    context.startActivity(intent);}
+                else if(position==5){
+                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    context.startActivity(intent);}
+
+                else if(position==6){
+                    Intent intent = new Intent(context, nothingToDisplay.class);
                     context.startActivity(intent);}
                else{
                     Intent intent = new Intent(context, nothingToDisplay.class);
