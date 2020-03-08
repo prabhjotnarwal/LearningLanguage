@@ -139,7 +139,8 @@ private StorageTask mUploadTask;
                         @Override
                         public void onSuccess(Uri uri) {
                             int id1 = Integer.valueOf(id);
-                            int key = id1 + 1;
+                            //int key = id1 + 1;
+                            int key = 1;
                             String key1 = Integer.toString(key);
                             String str1 = op1.getText().toString();
                             String str2 = op2.getText().toString();
