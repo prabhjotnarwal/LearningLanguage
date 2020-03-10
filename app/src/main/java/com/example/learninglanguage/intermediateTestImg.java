@@ -28,7 +28,7 @@ private ImageView img;
 TextView timer;
 Button b1, b2, b3, b4;
     int correct = 0;
-    int total = 6;
+    int total = 0;
     int wrong = 0;
 private FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
    private DatabaseReference reference;
@@ -49,7 +49,7 @@ private FirebaseDatabase firebaseDatabase=FirebaseDatabase.getInstance();
     }
     private void updateQuestion() {
         total++;
-        if (total == 1) {
+        if (total >2) {
             reverseTimer(0,timer);
         }
         else {

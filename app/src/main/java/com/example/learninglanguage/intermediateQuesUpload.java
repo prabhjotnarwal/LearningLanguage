@@ -138,10 +138,9 @@ private StorageTask mUploadTask;
                     fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
-                            int id1 = Integer.valueOf(id);
-                            //int key = id1 + 1;
-                            int key = 1;
-                            String key1 = Integer.toString(key);
+
+//                            int key = 1;
+//                            String key1 = Integer.toString(key);
                             String str1 = op1.getText().toString();
                             String str2 = op2.getText().toString();
                             String str3 = op3.getText().toString();
@@ -149,7 +148,7 @@ private StorageTask mUploadTask;
                             String str5 = ans1.getText().toString();
                             uploadImageQue uploadImageQue1 = new uploadImageQue(uri.toString(),str1,str2,str3,str4,str5);
                             String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(key1).setValue(uploadImageQue1);
+                            mDatabaseRef.child(uploadId).setValue(uploadImageQue1);
                             Toast.makeText(getApplicationContext(), "Uploaded Successfully", Toast.LENGTH_LONG).show();
                         }
                     });

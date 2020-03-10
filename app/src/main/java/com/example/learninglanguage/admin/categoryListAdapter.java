@@ -17,11 +17,13 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.example.learninglanguage.Animalactivity;
 import com.example.learninglanguage.R;
 import com.example.learninglanguage.levelAnimal;
 import com.example.learninglanguage.levelColor;
 import com.example.learninglanguage.levelFruit;
 import com.example.learninglanguage.nothingToDisplay;
+import com.example.learninglanguage.viewLevel1;
 import com.example.learninglanguage.viewLevels;
 import com.google.gson.Gson;
 
@@ -63,7 +65,7 @@ public class categoryListAdapter extends RecyclerView.Adapter<categoryListAdapte
                 Gson gson = new Gson();
                 String jsonString = gson.toJson(category);
                 if(position==0){
-                     Intent intent = new Intent(context, viewLevels.class);
+                     Intent intent = new Intent(context, viewLevel1.class);
                      context.startActivity(intent);}
                 else if(position==1){
                     Intent intent = new Intent(context, levelColor.class);
@@ -83,7 +85,7 @@ public class categoryListAdapter extends RecyclerView.Adapter<categoryListAdapte
                     context.startActivity(intent);}
 
                 else if(position==6){
-                    Intent intent = new Intent(context, nothingToDisplay.class);
+                    Intent intent = new Intent(context, Animalactivity.class);
                     context.startActivity(intent);}
                else{
                     Intent intent = new Intent(context, nothingToDisplay.class);
