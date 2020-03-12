@@ -18,7 +18,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.gson.Gson;
 
 public class basic_test extends AppCompatActivity {
 
@@ -26,7 +25,7 @@ public class basic_test extends AppCompatActivity {
     TextView quest;
     Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 0;
+    int total = 14;
     int wrong = 0;
     DatabaseReference reference;
 
@@ -35,20 +34,23 @@ public class basic_test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_test);
-        b1 = (Button) findViewById(R.id.opta);
-        b2 = (Button) findViewById(R.id.optb);
-        b3 = (Button) findViewById(R.id.optc);
-        b4 = (Button) findViewById(R.id.optd);
+        b1 = (Button) findViewById(R.id.opta1);
+        b2 = (Button) findViewById(R.id.optb2);
+        b3 = (Button) findViewById(R.id.optc3);
+        b4 = (Button) findViewById(R.id.optd1);
 
-        quest = (TextView) findViewById(R.id.quesTxt);
+        quest = (TextView) findViewById(R.id.qtext);
         updateQuestion();
     }
 
     private void updateQuestion() {
         total++;
-        if (total > 7) {
-// result
-            Intent i=new Intent(getApplicationContext(),testResult.class);
+        if (total == 21) {
+            Toast.makeText(getApplicationContext(), "Test Complete", Toast.LENGTH_SHORT).show();
+            Intent i=new Intent(getApplicationContext(),RESULT_activity.class);
+            i.putExtra("total",String.valueOf(total));
+            i.putExtra("correct",String.valueOf(correct));
+            i.putExtra("incorrect",String.valueOf(wrong));
             startActivity(i);
         } else {
             reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
@@ -69,7 +71,6 @@ public class basic_test extends AppCompatActivity {
                         b2.setText(op2);
                         b3.setText(op3);
                         b4.setText(op4);
-
 
                         b1.setOnClickListener(new View.OnClickListener() {
                             @Override
