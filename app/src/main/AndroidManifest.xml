@@ -16,7 +16,11 @@
         <activity android:name=".nothingToDisplay" />
         <activity android:name=".viewLevels"></activity>
         <activity android:name=".Question">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".admin.categoryListActivity"></activity>
         <activity android:name=".adminSongUpload"></activity>
@@ -30,11 +34,7 @@
 
         </activity>
         <activity android:name=".intermediateQuesUpload">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".alphaLesson1"></activity>
         <activity android:name=".Advance_admin" />
@@ -43,9 +43,12 @@
         <activity android:name=".fruitActivity" />
         <activity android:name=".admin.addNewCategory"></activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".LoginActivity" >
+
+        </activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".splashs" />
+
     </application>
 
 </manifest>
