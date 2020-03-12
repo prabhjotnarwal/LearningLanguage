@@ -2,17 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.learninglanguage">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Animalactivity"></activity>
         <activity android:name=".nothingToDisplay" />
         <activity android:name=".viewLevels"></activity>
         <activity android:name=".Question">
@@ -22,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".admin.categoryListActivity"></activity>
         <activity android:name=".adminSongUpload"></activity>
         <activity android:name=".basic_test">
 
@@ -34,21 +30,33 @@
 
         </activity>
         <activity android:name=".intermediateQuesUpload">
-
         </activity>
-        <activity android:name=".alphaLesson1"></activity>
+        <activity android:name=".viewLevel1"></activity>
+        <activity
+            android:name=".intermediateTestImg"
+            android:label="Intermediate Test"></activity>
+
+        <activity android:name=".admin_level" />
+        <activity
+            android:name=".alphaLesson1"
+            android:label="Alphabet Basic Lesson" />
         <activity android:name=".Advance_admin" />
-        <activity android:name=".AdvanceLevel" />
-        <activity android:name=".colorActivity" />
-        <activity android:name=".fruitActivity" />
-        <activity android:name=".admin.addNewCategory"></activity>
+        <activity
+            android:name=".colorActivity"
+            android:label="Color Basic Lesson"></activity>
+        <activity
+            android:name=".fruitActivity"
+            android:label="Fruit Basic Lesson"></activity>
+        <activity android:name=".admin.addNewCategory" />
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" >
 
         </activity>
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".splashs" />
-
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
