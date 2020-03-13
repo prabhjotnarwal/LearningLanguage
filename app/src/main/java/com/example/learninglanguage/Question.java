@@ -160,8 +160,40 @@ public class Question extends AppCompatActivity {
                 String str3 = txt3.getText().toString();
                 String str4 = txt4.getText().toString();
                 String str5 = txt5.getText().toString();
+
+                if (str1.matches("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter Question", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (str2.matches("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter Option 1", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (str3.matches("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter Option 2", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (str4.matches("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter Option 3", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (str5.matches("")) {
+                    Toast.makeText(getApplicationContext(), "Please enter Option 4", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 //String str6 = txt6.getText().toString();
                 String answer = sp1.getSelectedItem().toString();
+
+                if (answer.matches("") || answer.matches("Select Correct Answer")) {
+                    Toast.makeText(getApplicationContext(), "Please select correct Answer", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
                 upload_question que = new upload_question(str1, str2, str3, str4, str5, answer);
 
                 ref.child(key1).push().setValue(que);

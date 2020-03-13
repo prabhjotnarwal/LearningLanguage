@@ -10,14 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".nothingToDisplay" />
-        <activity android:name=".viewLevels"></activity>
+        <activity android:name=".nothingToDisplay"
+            android:label="Learning Language"
+            />
+        <activity android:name=".viewLevels"
+            android:label="Level"
+            ></activity>
         <activity android:name=".Question">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".adminSongUpload"></activity>
         <activity android:name=".basic_test">
@@ -29,6 +29,9 @@
         <activity android:name=".RESULT_activity">
 
         </activity>
+        <activity android:name=".admin.categoryListActivity"
+            android:label="Categories"
+            ></activity>
         <activity android:name=".intermediateQuesUpload">
         </activity>
         <activity android:name=".viewLevel1"></activity>
@@ -40,7 +43,16 @@
         <activity
             android:name=".alphaLesson1"
             android:label="Alphabet Basic Lesson" />
-        <activity android:name=".Advance_admin" />
+        <activity android:name=".Advance_admin">
+
+        </activity>
+        <activity android:name=".AdvanceLevel">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".colorActivity"
             android:label="Color Basic Lesson"></activity>
