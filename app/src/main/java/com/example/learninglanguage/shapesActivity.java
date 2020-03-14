@@ -2,6 +2,7 @@ package com.example.learninglanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -9,15 +10,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class shapesActivity extends AppCompatActivity {
-    private Button c,re,d,t,s,p,h,st;
+    private Button c,re,d,t,s,p,h,st,btn;
     private ImageView ima;
-    private Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_color);
-        ima = findViewById(R.id.animal);
+        setContentView(R.layout.activity_shapes);
+        ima = findViewById(R.id.shape);
         c = findViewById(R.id.circle);
         d = findViewById(R.id.diamond);
         re = findViewById(R.id.rect);
@@ -33,7 +33,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855575932.mp3?alt=media&token=2c83e4e4-6932-4d6d-ac55-0c2cb47c02fa");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161086852.mp3?alt=media&token=5d4dbba2-1be3-4b0b-bcdf-e5a3ad11925c");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -57,7 +57,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855399717.mp3?alt=media&token=0cec0bd7-5ae6-40c0-903c-26f4dba58408"
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161303218.mp3?alt=media&token=0300ab64-c37b-48b2-b792-0ba0fae9741f"
                     );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
@@ -82,7 +82,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855365282.mp3?alt=media&token=a46f14aa-ce36-472f-81e4-6ddece66fd42");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161317443.mp3?alt=media&token=50d08624-3091-47cc-8f14-ff543be0f7e4");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -106,7 +106,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855762683.mp3?alt=media&token=000dfda2-ddef-417f-95e0-bf1892820827");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161147005.mp3?alt=media&token=8f220c21-6c17-47dd-b255-d2c07754c555");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -130,7 +130,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855343957.mp3?alt=media&token=1731193b-00c8-44f5-ab0c-3edef1854d09"
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161283933.mp3?alt=media&token=fe5ddbda-3d9f-4522-9877-904e03a8fdd6"
                     );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
@@ -155,7 +155,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855435083.mp3?alt=media&token=56721a07-ba7e-47f8-b206-2331134f8ffa");
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161210087.mp3?alt=media&token=4ce13b96-be0c-41dc-b8b9-3a2a2a64b791");
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
                         public void onPrepared(MediaPlayer mediaPlayer) {
@@ -174,12 +174,12 @@ public class shapesActivity extends AppCompatActivity {
                 }
             }
         });
-        s.setOnClickListener(new View.OnClickListener() {
+        st.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855656916.mp3?alt=media&token=de42d317-05e8-4f98-8ddf-d84130706deb"
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161254717.mp3?alt=media&token=c51891ec-2b2f-4254-9d4a-904c9291c4c9"
                     );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
@@ -204,7 +204,7 @@ public class shapesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     final MediaPlayer mp = new MediaPlayer();
-                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1582855633656.mp3?alt=media&token=0c27163f-8fe1-41c1-a7db-064024394e6d"
+                    mp.setDataSource("https://firebasestorage.googleapis.com/v0/b/my-application1-db96a.appspot.com/o/songs%2F1584161230457.mp3?alt=media&token=dab082a5-5b8c-4bca-ad0f-ce68c9d9044b"
                     );
                     mp.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                         @Override
@@ -224,7 +224,13 @@ public class shapesActivity extends AppCompatActivity {
                 }
             }
         });
-
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(shapesActivity.this, nothingToDisplay.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 
