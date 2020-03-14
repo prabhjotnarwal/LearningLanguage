@@ -19,9 +19,15 @@
         <activity android:name=".Question">
 
         </activity>
-        <activity android:name=".adminSongUpload"></activity>
-        <activity android:name=".basic_test">
+        <activity android:name=".adminSongUpload">
 
+        </activity>
+        <activity android:name=".basic_test">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".intermediate_test" />
         <activity android:name=".adminDashboard" />
@@ -31,7 +37,9 @@
         </activity>
         <activity android:name=".admin.categoryListActivity"
             android:label="Categories"
-            ></activity>
+            >
+
+        </activity>
         <activity android:name=".intermediateQuesUpload">
         </activity>
         <activity android:name=".viewLevel1"></activity>
@@ -47,11 +55,6 @@
 
         </activity>
         <activity android:name=".AdvanceLevel">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".colorActivity"
