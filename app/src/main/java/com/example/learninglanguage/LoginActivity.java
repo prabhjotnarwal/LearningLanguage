@@ -1,8 +1,13 @@
 package com.example.learninglanguage;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.icu.text.Normalizer2;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         mAuth = FirebaseAuth.getInstance();
         fBtn=findViewById(R.id.fPassword);
         initializeUI();
@@ -88,9 +94,18 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                            SharedPreferences pref;
+                            pref = getSharedPreferences("user_details",MODE_PRIVATE);
+
+                            SharedPreferences.Editor editor = pref.edit();
+                            editor.putString("username",email);
+                            editor.commit();
+
                             if (email.equals("admin@gmail.com")) {
                                 Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);
+
                                 Intent intent = new Intent(LoginActivity.this, adminDashboard.class);
                                 startActivity(intent);
 
@@ -100,6 +115,7 @@ public class LoginActivity extends AppCompatActivity {
                             {
                                 Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_LONG).show();
                                 progressBar.setVisibility(View.GONE);
+                                //Intent intent = new Intent(LoginActivity.this, categoryListActivity.class);
                                 Intent intent = new Intent(LoginActivity.this, categoryListActivity.class);
                                 startActivity(intent);
                             }
@@ -123,4 +139,5 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.login);
         progressBar = findViewById(R.id.progressBar);
     }
+
 }

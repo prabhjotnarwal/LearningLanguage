@@ -8,7 +8,7 @@
     tools:context=".adminSongUpload">
 
     <Button
-        android:id="@+id/selectsong"
+        android:id="@+id/selectvideo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
@@ -17,7 +17,7 @@
         android:text="Select"
         android:onClick="openAudioFile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/songtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/Videotitle" />
 
     <Button
         android:id="@+id/upload"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fileselected" />
 
     <EditText
-        android:id="@+id/songtitle"
+        android:id="@+id/Videotitle"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="64dp"
@@ -58,6 +58,6 @@
         android:layout_marginTop="56dp"
         android:text="No file selected"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/selectsong"
-        app:layout_constraintTop_toBottomOf="@+id/songtitle" />
+        app:layout_constraintStart_toEndOf="@+id/selectvideo"
+        app:layout_constraintTop_toBottomOf="@+id/Videotitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

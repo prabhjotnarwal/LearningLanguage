@@ -1,7 +1,6 @@
 package com.example.learninglanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatEditText;
 
 import android.content.ContentResolver;
 import android.content.Intent;
@@ -42,7 +41,7 @@ StorageTask muploadtask;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_song_upload);
-        title= (EditText)findViewById(R.id.songtitle);
+        title= (EditText)findViewById(R.id.Videotitle);
         txtv=findViewById(R.id.fileselected);
         progressBar=findViewById(R.id.progressBar2);
         refSongs= FirebaseDatabase.getInstance().getReference().child("songs");

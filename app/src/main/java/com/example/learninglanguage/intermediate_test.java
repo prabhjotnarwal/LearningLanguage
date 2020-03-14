@@ -19,35 +19,33 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.StorageReference;
 
 public class intermediate_test extends AppCompatActivity {
-    TextView quest,timer;
+    TextView quest;
     Button b1, b2, b3, b4, b5;
     int correct = 0;
-    int total = 7;
+    int total = 0;
     int wrong = 0;
     DatabaseReference reference;
-    private StorageReference mStorageRef;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_intemediate_test);
+        setContentView(R.layout.activity_basic_test);
         b1 = (Button) findViewById(R.id.opta1);
         b2 = (Button) findViewById(R.id.optb2);
         b3 = (Button) findViewById(R.id.optc3);
         b4 = (Button) findViewById(R.id.optd1);
-        timer=findViewById(R.id.timertxt);
-        quest = (TextView) findViewById(R.id.qtext);
+
+       // quest = (TextView) findViewById(R.id.quesTxt);
         updateQuestion();
-        reverseTimer(200, timer);
     }
 
     private void updateQuestion() {
         total++;
-        if (total == 10) {
-            reverseTimer(0,timer);
+        if (total > 4) {
+
         }
         else {
             reference = FirebaseDatabase.getInstance().getReference("Question").child(String.valueOf(total));
@@ -55,6 +53,7 @@ public class intermediate_test extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
                         String ques = ds.child("question").getValue().toString();
                         final String answer = ds.child("answer").getValue().toString();
                         final String op1 = ds.child("option1").getValue().toString();
@@ -67,6 +66,7 @@ public class intermediate_test extends AppCompatActivity {
                         b2.setText(op2);
                         b3.setText(op3);
                         b4.setText(op4);
+
 
                         b1.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -96,6 +96,10 @@ public class intermediate_test extends AppCompatActivity {
                                     } else if (b3.getText().toString().equals((answer))) {
                                         b3.setBackgroundColor(Color.GREEN);
                                     } else if (b4.getText().toString().equals((answer))) {
+
+
+
+
                                         b4.setBackgroundColor(Color.GREEN);
                                     }
 
@@ -299,10 +303,11 @@ public class intermediate_test extends AppCompatActivity {
                 public void onFinish() {
                     tv.setText("completed");
                     Intent myIntent = new Intent(intermediate_test.this, RESULT_activity.class);
-                   // myIntent.putExtra("total", String.valueOf(total));
+                    myIntent.putExtra("total", String.valueOf(total));
                     myIntent.putExtra("correct", String.valueOf(correct));
                     myIntent.putExtra("incorrect", String.valueOf(wrong));
                     startActivity(myIntent);
+
                 }
             }.start();
         }

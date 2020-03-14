@@ -10,80 +10,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".viewLevel1"></activity>
-        <activity android:name=".levelAnimal" />
-        <activity
-            android:name=".optToAddQuest"
-            android:label="Options" />
-        <activity
-            android:name=".intermediateTestImg"
-            android:label="Intermediate Test"></activity>
-        <activity
-            android:name=".intermediateQuesUpload"
-            android:label="Upload questions for Intermediate Level"></activity>
-        <activity
-            android:name=".levelFruit"
-            android:label="Levels" />
-        <activity
-            android:name=".levelColor"
-            android:label="Levels" />
-        <activity
-            android:name=".Admin_Category_List"
-            android:label="List of Categories" />
-        <activity android:name=".Admin_category_Adapter" />
-        <activity
-            android:name=".nothingToDisplay"
-            android:label="Nothing To Display" />
-        <activity
-            android:name=".viewLevels"
-            android:label="List of Levels" />
-        <activity
-            android:name=".Question"
-            android:label="Upload Questions" />
-        <activity
-            android:name=".AdvanceLevel"
-            android:label="Alphabet Advance Lesson" />
-        <activity
-            android:name=".admin.categoryListActivity"
-            android:label="List of Categories">
+        <activity android:name=".nothingToDisplay"
+            android:label="Learning Language"
+            />
+        <activity android:name=".viewLevels"
+            android:label="Level"
+            ></activity>
+        <activity android:name=".Question">
 
         </activity>
-        <activity
-            android:name=".admin.UpdateCategory"
-            android:label="Update or Delete Category" />
-        <activity
-            android:name=".adminSongUpload"
-            android:label="Upload Sounds" />
-        <activity
-            android:name=".Animalactivity"
-            android:label="Animal Basic Lesson" />
-        <activity
-            android:name=".basic_test"
-            android:label="Alphabet Basic Test" >
+        <activity android:name=".adminSongUpload">
+
+        </activity>
+        <activity android:name=".basic_test">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".intermediate_test" />
+        <activity android:name=".adminDashboard" />
+        <activity android:name=".alphaLesson2"></activity>
+        <activity android:name=".RESULT_activity">
 
         </activity>
-        <activity
-            android:name=".intermediate_test"
-            android:label="Alphabet Intermediate Test" >
+        <activity android:name=".admin.categoryListActivity"
+            android:label="Categories"
+            >
 
         </activity>
+        <activity android:name=".intermediateQuesUpload">
+        </activity>
+        <activity android:name=".viewLevel1"></activity>
         <activity
-            android:name=".adminDashboard"
-            android:label="Admin Dashboard" />
-        <activity
-            android:name=".alphaLesson2"
-            android:label="Alphabet Intermediate Lesson" />
+            android:name=".intermediateTestImg"
+            android:label="Intermediate Test"></activity>
+
         <activity android:name=".admin_level" />
         <activity
             android:name=".alphaLesson1"
             android:label="Alphabet Basic Lesson" />
-        <activity android:name=".Advance_admin" />
+        <activity android:name=".Advance_admin">
+
+        </activity>
+        <activity android:name=".AdvanceLevel">
+        </activity>
         <activity
             android:name=".colorActivity"
             android:label="Color Basic Lesson"></activity>
@@ -91,21 +63,12 @@
             android:name=".fruitActivity"
             android:label="Fruit Basic Lesson"></activity>
         <activity android:name=".admin.addNewCategory" />
-        <activity
-            android:name=".RESULT_activity"
-            android:label="Results" />
         <activity android:name=".MainActivity" />
-        <activity
-            android:name=".LoginActivity"
-            android:label="Login" >
+        <activity android:name=".LoginActivity" >
 
         </activity>
-        <activity
-            android:name=".RegistrationActivity"
-            android:label="Registration" />
-        <activity android:name=".splashs" >
-
-        </activity>
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".splashs" />
     </application>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 

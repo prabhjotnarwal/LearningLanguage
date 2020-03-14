@@ -1,5 +1,6 @@
 package com.example.learninglanguage;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.learninglanguage.admin.upload_question;
+import com.example.learninglanguage.admin.categoryListActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +36,7 @@ public class basic_test extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basic_test);
+
         b1 = (Button) findViewById(R.id.opta1);
         b2 = (Button) findViewById(R.id.optb2);
         b3 = (Button) findViewById(R.id.optc3);
@@ -66,7 +69,7 @@ public class basic_test extends AppCompatActivity {
                         final String op3 = ds.child("option3").getValue().toString();
                         final String op4 = ds.child("option4").getValue().toString();
                         final upload_question question = dataSnapshot.getValue(upload_question.class);
-                        quest.setText(ques);
+                         quest.setText(ques);
                         b1.setText(op1);
                         b2.setText(op2);
                         b3.setText(op3);
@@ -285,9 +288,8 @@ public class basic_test extends AppCompatActivity {
 
         }
     }
-    }
 
-
+}
 
 
 

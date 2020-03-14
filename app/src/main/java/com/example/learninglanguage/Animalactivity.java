@@ -2,6 +2,7 @@ package com.example.learninglanguage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -9,9 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class Animalactivity extends AppCompatActivity {
-    private Button e,li,be,de,ti,ho,pan,d;
+    private Button e,li,be,de,ti,ho,pan,d,btn;
     private ImageView animal;
-    private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,6 +217,13 @@ public class Animalactivity extends AppCompatActivity {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
+            }
+        });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Animalactivity.this, nothingToDisplay.class);
+                startActivity(intent);
             }
         });
 

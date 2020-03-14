@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +17,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import static android.icu.text.DisplayContext.LENGTH_SHORT;
+
 public class AdvanceLevel extends AppCompatActivity {
 
     VideoView video;
@@ -23,7 +26,7 @@ public class AdvanceLevel extends AppCompatActivity {
     ProgressDialog pd;
     private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
     private DatabaseReference reference = firebaseDatabase.getReference();
-    private DatabaseReference childreference = reference.child("url");
+    private DatabaseReference childreference = reference.child("songLink");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class AdvanceLevel extends AppCompatActivity {
         video = (VideoView) findViewById(R.id.video);
         pd = new ProgressDialog(AdvanceLevel.this);
         url = (TextView) findViewById(R.id.txt1);
+        Toast.makeText(getApplicationContext(), url.toString(), Toast.LENGTH_LONG);
         pd.setMessage("Buffering please wait");
         pd.show();
     }
