@@ -6,6 +6,11 @@ public class ResultAdapter {
     private String result;
     private String score;
 
+    public ResultAdapter()
+    {
+
+    }
+
     public ResultAdapter(String username, String result, String score) {
         this.username = username;
         this.result = result;

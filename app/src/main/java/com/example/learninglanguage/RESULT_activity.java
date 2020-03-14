@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.graphics.Color;
@@ -22,6 +24,7 @@ public class RESULT_activity extends AppCompatActivity {
     private FirebaseDatabase db;
     private DatabaseReference ref;
     TextView t1,t2,t3,t4;
+    Button btn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,8 @@ public class RESULT_activity extends AppCompatActivity {
         t2=(TextView)findViewById(R.id.textView17);
         t3=(TextView)findViewById(R.id.textView15);
         t4= findViewById(R.id.result);
+
+        btn1 = findViewById(R.id.btnprofile);
 
         Intent i= getIntent();
 
@@ -73,6 +78,15 @@ public class RESULT_activity extends AppCompatActivity {
         t1.setText(questions);
         t2.setText(correct);
         t3.setText(wrong);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(RESULT_activity.this,Profile.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
