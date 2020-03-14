@@ -1,7 +1,9 @@
 package com.example.learninglanguage.admin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,7 +11,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.learninglanguage.LoginActivity;
 import com.example.learninglanguage.R;
+import com.example.learninglanguage.RESULT_activity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,6 +39,12 @@ public class categoryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_list);
         recyclerView = findViewById(R.id.crecyclerview);
+
+        // add back arrow to toolbar
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
@@ -67,14 +77,17 @@ public class categoryListActivity extends AppCompatActivity {
 
         });
     }
-    public void onBackPress()
-    {
-        finish();
-        super.onBackPressed();
-    }
     protected void onDestroy()
     {
         super.onDestroy();
         ref.removeEventListener(valueEventListener);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent = new Intent(categoryListActivity.this, LoginActivity.class);
+        startActivity(intent);
     }
 }

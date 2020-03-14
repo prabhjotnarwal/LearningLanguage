@@ -96,6 +96,10 @@ public class intermediate_test extends AppCompatActivity {
                                     } else if (b3.getText().toString().equals((answer))) {
                                         b3.setBackgroundColor(Color.GREEN);
                                     } else if (b4.getText().toString().equals((answer))) {
+
+
+
+
                                         b4.setBackgroundColor(Color.GREEN);
                                     }
 

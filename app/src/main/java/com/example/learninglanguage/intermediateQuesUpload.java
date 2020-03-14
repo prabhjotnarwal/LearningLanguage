@@ -19,8 +19,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -36,9 +39,9 @@ private EditText op1,op2,op3,op4,ans1;
 private ProgressBar mProgressBar;
 private Uri mQueUri;
 private StorageReference mStorageRef;
-private DatabaseReference mDatabaseRef;
+private DatabaseReference mDatabaseRef,ref;
 private StorageTask mUploadTask;
-    public String ques;
+    public String id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +57,27 @@ private StorageTask mUploadTask;
         ans1=findViewById(R.id.ans);
         mStorageRef= FirebaseStorage.getInstance().getReference("ImgQues");
         mDatabaseRef= FirebaseDatabase.getInstance().getReference("ImgQues");
+
+        ref = FirebaseDatabase.getInstance().getReference("ImgQues");
+
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                    id = ds.getKey();
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
         q.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -111,10 +135,13 @@ private StorageTask mUploadTask;
                         }
                     }, 600);
                     Toast.makeText(intermediateQuesUpload.this, "Uploaded successfully", Toast.LENGTH_LONG).show();
-                    // uploadImageQue uploadImageQue=new uploadImageQue(taskSnapshot.getStorage().getDownloadUrl().toString());
                     fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                         @Override
                         public void onSuccess(Uri uri) {
+                            int id1 = Integer.valueOf(id);
+                            //int key = id1 + 1;
+                            int key = 1;
+                            String key1 = Integer.toString(key);
                             String str1 = op1.getText().toString();
                             String str2 = op2.getText().toString();
                             String str3 = op3.getText().toString();
@@ -122,7 +149,7 @@ private StorageTask mUploadTask;
                             String str5 = ans1.getText().toString();
                             uploadImageQue uploadImageQue1 = new uploadImageQue(uri.toString(),str1,str2,str3,str4,str5);
                             String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(uploadId).setValue(uploadImageQue1);
+                            mDatabaseRef.child(key1).setValue(uploadImageQue1);
                             Toast.makeText(getApplicationContext(), "Uploaded Successfully", Toast.LENGTH_LONG).show();
                         }
                     });
