@@ -1,9 +1,9 @@
 package com.example.learninglanguage.admin;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learninglanguage.LoginActivity;
 import com.example.learninglanguage.R;
-import com.example.learninglanguage.RESULT_activity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -22,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 public class categoryListActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -39,6 +40,13 @@ public class categoryListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category_list);
         recyclerView = findViewById(R.id.crecyclerview);
+
+        SharedPreferences prf;
+        prf = getSharedPreferences("user_details",MODE_PRIVATE);
+
+        String sess =  prf.getString("username","");
+
+        Toast.makeText(getApplicationContext(),sess,LENGTH_LONG);
 
         // add back arrow to toolbar
         if (getSupportActionBar() != null){
